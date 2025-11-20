@@ -1,0 +1,522 @@
+<!DOCTYPE html> 
+<html lang="PT-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content= "width=device-width, initial-scale=1.0">
+        <title>Code Shield | Segurança & Souluções em TI </title>  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet"> 
+<style>
+    :root {
+        --bg: #050816;
+        --bg-card: #0b1120;
+        --accent: #38bdf8;
+        --accent-strong: #0ea5e9;
+        --text: #e5e7eb;
+        --muted: #9ca3af;
+        --danger: ##f97316;
+        --radius-x1: 18px;
+        --shadow-soft: 0 18px 45px rgba(0,0,0,0.45);
+  }
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+  font-family: 'poppins', sans-serif;
+  background: radial-gradient(circle at top, #0f172a, #020617 45%, #000 100%);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+.container {
+    width: 100%;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+header { 
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(16px);
+    background: linear-gradient(to bottom, rgba(2,6,23,0.95), rgba(2,6,32,0.7), transparent);
+    border-bottom: 1px solid rgba(148,163,184,0.18);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 22px rgba(56,189,248,0.4);
+    background: radial-gradient(circle at 30% 0, #38bdf8, #0f172a, 6%);
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.logo-main{
+    font-size: 1.15rem;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.logo-text-sub {
+    font-size: 0.68rem;
+    font-weight: 400;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.nav-links a {
+    color: var(--muted);
+    position: relative;
+}
+
+.nav links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    border-radius: 999px;
+    background: linear-gradient(to right, var(--accent), var(--danger),);
+    transition: width 0.2s ease-out;
+}
+
+.nav-links a:hover {
+    color: var(--text);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.btn-primary {
+    padding: 0.55rem 1.2rem;
+    border-radius: 999px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: linear-gradient(135deg, var(--accent-strong), var(--danger));
+    color: #0b1120;
+    font-weight: 600;
+    font-size: 0.9rem;
+    box-shadow: 0 12px 30px rgba(56,189,248,0.45);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-primary span {
+    font-size: 1rem;
+}
+
+main {
+    padding-bottom: 4rem;
+}
+
+.hero-kicker {
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16rem;
+    color: var(--accente);
+    margin-bottom: 0.75rem;
+}
+
+hero.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    color: var(--muted);
+    max-width: 34rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-bottom: 1.7rem;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.4);
+    background: radial-gradient(circle at 0 0, rgba(56,189,248,0.16), transparent 60%);
+    color: var(--muted);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: center;
+    align-items: center;
+}
+
+.btn-ghost spn {
+    font-size: 1rem;
+}
+
+.hero-right {
+    position: relative;
+}
+
+.hero.card {
+    background: radial-gradient(circle at top, #0f172a, #020617 70%);
+    border-radius: 24px;
+    box-shadow: var(--shadow-soft);
+    padding: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-chip {
+    font-size: 0.7rem;
+    padding: 0.25rem;
+    border-radius: 999px;
+    border: 1px solid rgba(56,189,248,0.6);
+    color: var(--accent);
+    background: rgba(15,23,42,0.9);
+    text-transform: uppercase;
+    letter-spacing: 0.4em;
+}
+
+.hero-status {
+    font-size: 0.7rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #22c55e;
+    box-shadow: 0 0 12px rgba(34,197,94,0.9);
+}
+
+.hero-matrix {
+    font-family: "SF Mono", ui-monospace, Menlo, Monaco, Consolas, "Libertation Mono", "Coursier New", monospace;
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: #9ca3af;
+    max-height: 180px;
+    overflow: hidden;
+    position: relative;
+}
+
+.hero-matrix spam.key {
+    color: #e5e7eb;
+}
+
+.hero-matrix spam.val-blue {
+    color: #3b82f6;
+}
+
+.hero-matrix spam.val-orange {
+    color: #fb923c;
+}
+
+.hero-matrix spam.val-green {
+    color: #4ade80;
+}
+
+hero-footer-note {
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.7rem;
+}
+
+.hero-footer-note strong {
+    color: var(--accent);
+}
+
+.hero-tagline {
+    border-radius: 999px;
+    border: 1px solid rgba(148,163,184,0.35);
+    padding: 0.4rem 0.7rem;
+    font-size: 0.7rem;
+    color: var(--muted);
+}
+
+.services {
+    padding: 2rem 0 0;
+}
+
+.section-title {
+    font-size: 1.35rem;
+    letter-spacing: 0.18rem;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 0.4rem;
+}
+
+.section-heading {
+    font-size: 1.35rem;
+    margin-bottom: 1.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0,1fr));
+    gap: 1.2rem;
+}
+
+.card {
+    background: radial-gradient(circle at top, rgba(15,23,42,0.9) rgba(15,23,42,0.85));
+    border-radius:var(--radius-x1);
+    border: 1px solid rgba(148,163,184,0.25);
+    padding: 1rem;
+    box-shadow: var(--shadow-soft);
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    font-size: 0.86rem;
+}
+
+.card-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--accent);
+}
+
+.card-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card p {
+    color: var(--muted);
+}
+
+.card ul {
+    margin-left: 1.1rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+    display: grid;
+    gap: 0.15rem;
+}
+
+.card ul li::marker {
+    color: var(--accent);
+}
+
+footer {
+    margin-top: 3rem;
+    padding: 1.5rem 0 2rem;
+    border-top: 1px solid rgba(148,163,184,0.3);
+    font-size: 0.8rem;
+    color: var(--mutted);
+    text-align: center;
+}
+
+footer span {
+    color: var(--accent);
+}
+
+@media (max-width: 880px) {
+    .hero {
+        flex-direction: column;
+        grid-template-columns: minmax(0, 1fr);
+        padding-top: 3rem;
+}
+
+.hero-right {
+    order: -1;
+}
+.nav-links {
+    display: none;
+}
+.grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+  </style> 
+</head> 
+<body> 
+  <header>
+    <div class="container nav">
+     <div class="logo">
+      <div class="logo-icon">CS</div>
+      <div> 
+      <div> class="logo-text-main">Code Shield</div>
+      <div> class="logo-text-sub">Cyber Security & Dev Solutions</div>
+    </div> 
+  </div>
+  <nav class="nav-links">
+     <a href="#services">Serviços</a>
+     <a href="#sobre">Sobre</a>
+     <a href="#contato">Contato</a>
+     <buttom class="btn-primary">
+       Falar sobre um projeto 
+        <span>➜</span>
+      </buttom>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="container hero"> 
+    <div>
+      <div class="hero-kicker">Startup de Tecnologia & segurança</div>
+        <h1 class="hero-title"> 
+            Blindando o futuro digital<br>
+            com <span>código, segurança e estratégia</span>.
+           </h1>
+        <p class="hero-subtitle">
+         A Code Shield ajuda pequenas e médias empresas a proteger seus dados,
+         profissionalizar a presença digital e transformar tecnologia em lucro -
+         com sites modernos, automatização sob medidas e prática decibersegurança Blue Team.
+         </p>
+
+         <div class="hero-badges"> 
+           <button class="btn-primary">
+            Quero um diagnótico grástis
+             <span>⚡</span>
+        </button>
+        <button class="btn-ghost">
+          Ver serviços
+          <span>↓</span>
+        </button>
+    </div>
+</div>
+
+
+<div class="hero-right"> 
+ <div class="hero-card">
+  <div class="hero-card-header">
+    <div class="hero-chip">Shield Monitor v1.0</div>
+    <div class="hero-status">
+      <span class="dot"></span>
+      ambiente monitorado
+    </div>
+ </div>
+ <div class="hero-matrix"> 
+   <span class="key">client_name</span>: <span class="val-blue">"Empresa Local São Vicente-SP"</span><br>
+   <span class="key">stack</span>: <span class="val-orange">["Web Security", "Infra básica", "Web dev"]</span><br>
+   <span class="key">risco_inicial</span>: <span class="val-orange">"ALTO"</span><br>
+   <span class="key">risco_atual</span>: <span class="val-green">"BAIXO"</span><br>
+   <span class="key">surprefíce_de_ataque</span>: <span class="val-blue">"Reduzida em 63%"</span>
+   <span class="key">uptime_site</span>: <span class="val-green">"99.9%"</span><br>
+   <span class="key">projeto_assinado-por</span>: <span class="val-blue">"Operação segura & em crescimento"</span><br>
+   <span class="key">status</span>: <span class="val-green">"Operação segura & em crescimento"</span><br>
+</div>
+<div class="hero-footer-note">
+  <div class="hero-tagline">
+        "Quem cuida do seu código, protege também o seu caixa."
+      </div>
+    </div>
+  </div>
+</div> 
+</section>
+
+<section id="services" class="container services">
+  <div class="section-title">Serviços</div>
+  <h2 class="section-heading">O que a code Shield faz pela sua empresa</h2>
+
+  <div class="grid"> 
+    <article class="card">
+       <div class="card-label">Front-end & Branding</div>
+       <div class="card-title">Sites modernos e iterfaces impressionantes</div>
+       <p>
+         Desenvolvimento de websites profissionais que passam confiança,
+         credibilidade e domínio técnico - feitos para converter visitantes em clientes.
+       </p>
+       <ul>
+        <li>Landing pages rápidas e responsivas</li>
+        <li>Layouts modernos com foco em conversão</li>
+        <li>Integração com redes sociais e WhatsApp</li>
+    </ul>
+</article>
+
+<article class="card">
+  <div class="card-label">Cyber blue Team</div>
+  <div class="card-title">Segurança básica acessível para pequenos negócios</div>
+  <p>
+    Antes de sofrer um ataque e perder seus dados, sua empresa pode adotar
+    boas prátcas de segurança que já fazem enorme diferença no dia a dia.
+  </p>
+  <ul>
+    <li>Higiene digital e orientação de boas práticas</li>
+    <li>mapeanmento simples de riscos mais comuns</li>
+    <li>Apoio a organização de acesso a senhas</li>
+  </ul>
+ </article>
+
+ <article class="card">
+   <div class="card-label">Soluções em TI</div>
+   <div class="card-title">Automação e organização de dados</div>
+   <p>
+    Pequenas Automações e sistemas sob medida que tiram sua operação
+    do papel e das planilhas improvisadas. 
+   </p>
+   <ul> 
+     <li>Organização básica de estoques e clientes</li>
+     <li>Fluxos simples para o dia a dia</li>
+     <li>Visão clara de dados que importam</li>
+    </ul>
+   </article>
+  </div>
+ </section>
+</main>
+
+<footer id="contato">
+  <div class="container">
+ © <span>Code Shield</span> — Segurança & Desenvolvimento em TI.  
+      Transformando código em blindagem digital para pequenos e médios negócios.
+    </div>
+  </footer>
+</body>
+</html>
+
