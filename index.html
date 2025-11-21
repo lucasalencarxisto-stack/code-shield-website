@@ -15,12 +15,65 @@
 
     <style>
       
+      html {
+  scroll-behavior: smooth;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+section:target {
+  outline: 2px solid #38bdf8;
+  scroll-margin-top: 80px;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #020617; 
+  color: #e5e7eb;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2.5rem 8vw;
+}
+
+.logo-hero {
+  width: 160px;      
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+}
+
+.hero-text h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+}
+
+.hero-text p {
+  margin-top: 0.4rem;
+  font-size: 1rem;
+  color: #9ca3af;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
 /* === MENU HAMBURGER === */
 
 .hamburger {
   position: fixed;
   top: 22px;
-  right: 22px;
+  left: 22px;
+  right: auto;
   width: 42px;
   height: 36px;
   background: transparent;
@@ -268,13 +321,14 @@
         padding-bottom: 4rem;
       }
 
-      .hero {
+      .hero-main {
         display: grid;
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         gap: 2.5rem;
         align-items: center;
         padding-top: 3rem;
       }
+
 
       .hero-kicker {
         font-size: 0.78rem;
@@ -406,6 +460,10 @@
         padding: 2rem 0 0;
       }
 
+      section {
+        scroll-margin-top: 90px; 
+      }
+
       .section-title {
         font-size: 0.85rem;
         letter-spacing: 0.18em;
@@ -483,7 +541,7 @@
       }
 
       @media (max-width: 880px) {
-        .hero {
+        .hero-main {
           grid-template-columns: minmax(0, 1fr);
           padding-top: 3rem;
         }
@@ -499,19 +557,18 @@
     </style>
   </head>
   <body>
-   <header>
-  <div class="container nav">
-    <div class="logo">
-      <div class="logo-icon">CS</div>
-      <div>
-        <div class="logo-text-main">Code Shield</div>
-        <div class="logo-text-sub">
-          Cyber Security & Dev Solutions
-        </div>
-      </div>
+     <header class="hero">
+ <img
+  src="./assets/img/logo-code-shield.png"
+  alt="Logo Code Shield"
+  width="200"
+  class="logo-hero"
+/>
+  <div class="hero-text">
+      <h1>Code Shield</h1>
+      <p>Segurança & Soluções em TI</p>
     </div>
-  </div>
-</header>
+  </header>
 <button class="hamburger" id="hamburgerBtn">
   <span></span>
   <span></span>
@@ -523,7 +580,6 @@
   </div>
  <ul>
     <li><a href="#services">Serviços</a></li>
-    <li><a href="#infra">Infraestrutura & Cloud</a></li>
     <li><a href="#cyber">Cibersegurança</a></li>
     <li><a href="#websites">Websites</a></li>
     <li><a href="#software">Software sob medida</a></li>
@@ -542,7 +598,7 @@
  </div>
 
     <main>
-      <section class="container hero">
+      <section class="container hero-main">
         <div>
           <div class="hero-kicker">Startup de tecnologia & segurança</div>
           <h1 class="hero-title">
@@ -663,6 +719,412 @@
           </article>
         </div>
       </section>
+      <!-- WEBSITES / VITRINE DIGITAL -->
+<section id="websites" class="container services">
+  <div class="section-title">Websites</div>
+  <h2 class="section-heading">Sites profissionais e vitrines digitais</h2>
+
+  <p class="hero-subtitle">
+    Desenvolvemos websites sob medida para posicionar sua marca de forma profissional,
+    com foco em velocidade, confiança e conversão de visitantes em clientes.
+  </p>
+
+  <div class="card" style="margin-top: 1rem;">
+    <div class="card-label">Modelo de demonstração</div>
+    <div class="card-title">Alexandre Lanchonete (site vitrine)</div>
+    <p>
+      Exemplo de site para lanchonete & E-commerce, com cadastro de produtos, gestão de pedidos
+      e interface moderna:
+      <br />
+      🔗
+      <a href="https://alexandrelanchonete.runasp.net" target="_blank" rel="noopener noreferrer">
+        alexandrelanchonete.runasp.net
+      </a>
+     </p>
+    <p>
+      <strong>Importante:</strong> este site é um <strong>modelo demonstração</strong>.
+      Cada cliente pode <strong>personalizar totalmente</strong> o layout, as cores,
+      os textos, as páginas e as funcionalidades de acordo com a identidade do negócio.
+    </p>
+  </div>
+
+  <div class="grid" style="margin-top: 1.2rem;">
+    <article class="card">
+      <div class="card-label">Presença digital</div>
+      <div class="card-title">Sites institucionais e landing pages</div>
+      <ul>
+        <li>Páginas modernas, responsivas e rápidas</li>
+        <li>Foco em conversão: CTA claros e objetivos</li>
+        <li>Integração com WhatsApp, redes sociais e mapas</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Personalização total</div>
+      <div class="card-title">Layout alinhado ao seu negócio</div>
+      <ul>
+        <li>Cores, logotipo e identidade visual do cliente</li>
+        <li>Textos profissionais e linguagem estratégica</li>
+        <li>Elementos visuais pensados para o público-alvo</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Hospedagem</div>
+      <div class="card-title">Infraestrutura para o seu site</div>
+      <ul>
+        <li>Hospedagem em nuvem (AWS, Azure, etc.) – investimento direto nos provedores</li>
+        <li>Uso de Cloudflare para performance, CDN e proteção extra</li>
+        <li>Opção de hospedagem gratuita em servidor europeu ASP.NET (RunASP)</li>
+      </ul>
+      <p style="font-size: .78rem; color: #9ca3af; margin-top: .4rem;">
+        *Os custos de hospedagem são pagos diretamente às plataformas
+        (provedores oficiais). A Code Shield orienta na escolha e faz toda a configuração.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- CIBERSEGURANÇA -->
+<section id="cyber" class="container services">
+  <div class="section-title">Cibersegurança</div>
+  <h2 class="section-heading">Blue Team completo para proteger o seu negócio</h2>
+
+  <p class="hero-subtitle">
+    Atuamos no modelo Blue Team, reforçando suas defesas digitais e reduzindo a superfície
+    de ataque antes que incidentes aconteçam.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Análises e testes</div>
+      <div class="card-title">Varreduras e Pentests</div>
+      <ul>
+        <li>Varredura de vulnerabilidades e mapeamento de superfície de ataque</li>
+        <li>Testes de intrusão (pentest) em modo White, Grey e Black Box</li>
+        <li>Relatórios técnicos e executivos com plano de ação</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Plataforma Code Shield</div>
+      <div class="card-title">Software de segurança em desenvolvimento</div>
+      <p>
+        Estamos desenvolvendo um software próprio focado em monitorar riscos,
+        registros críticos e pontos sensíveis da operação do cliente.
+      </p>
+      <ul>
+        <li>Monitoramento de segurança adaptado ao seu ambiente</li>
+        <li>Alertas, registros e visão centralizada de eventos</li>
+        <li>Versão personalizada sob demanda para sua empresa</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Governança</div>
+      <div class="card-title">Boas práticas e orientação</div>
+      <ul>
+        <li>Organização de acessos, senhas e usuários</li>
+        <li>Recomendações de backups e proteção de dados</li>
+        <li>Apoio para adequação à LGPD em conjunto com auditorias</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- SOFTWARE SOB MEDIDA -->
+<section id="software" class="container services">
+  <div class="section-title">Software</div>
+  <h2 class="section-heading">Sistemas sob medida para o seu tipo de negócio</h2>
+
+  <p class="hero-subtitle">
+    Desenvolvemos sistemas personalizados para empresas que precisam sair da planilha
+    e ganhar organização, controle e previsibilidade.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Segmentos</div>
+      <div class="card-title">Onde atuamos</div>
+      <ul>
+        <li>Lojas e comércios em geral</li>
+        <li>Restaurantes, lanchonetes e delivery</li>
+        <li>Empresas de serviços e escritórios</li>
+        <li>Controle de estoque e almoxarifado</li>
+        <li>Gestão financeira e fluxo de caixa</li>
+        <li>Hotelaria e hospedagem</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Customização</div>
+      <div class="card-title">Funciona do jeito que você trabalha</div>
+      <ul>
+        <li>Campos, telas e relatórios personalizados</li>
+        <li>Processos alinhados à rotina da sua equipe</li>
+        <li>Integrações sob demanda (APIs, gateways, etc.)</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Modelo comercial</div>
+      <div class="card-title">Projetos por pacote</div>
+      <p>
+        Trabalhamos com pacotes <strong>básico</strong>, <strong>intermediário</strong>
+        e <strong>avançado</strong>, dimensionados conforme o tamanho do projeto.
+      </p>
+      <p style="font-size: .8rem; color: #9ca3af; margin-top: .3rem;">
+        Para tabela de valores detalhada, entre em contato pelo WhatsApp e receba
+        uma proposta alinhada à realidade do seu negócio.
+      </p>
+    </article>
+  </div>
+</section>
+
+<!-- APPS -->
+<section id="apps" class="container services">
+  <div class="section-title">Aplicativos</div>
+  <h2 class="section-heading">Apps que colocam sua marca no bolso do cliente</h2>
+
+  <p class="hero-subtitle">
+    Aplicativos para Android e, sob demanda, outras plataformas, com foco em usabilidade,
+    performance e integração com sua operação.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Funcionalidades</div>
+      <div class="card-title">Apps conectados ao seu sistema</div>
+      <ul>
+        <li>Login seguro e gerenciamento de usuários</li>
+        <li>Integração com banco de dados e APIs</li>
+        <li>Notificações push e comunicação em tempo quase real</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Experiência</div>
+      <div class="card-title">Interface e navegação</div>
+      <ul>
+        <li>Design intuitivo e responsivo</li>
+        <li>Fluxos desenhados para o seu público</li>
+        <li>Identidade visual alinhada à marca</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- DADOS & IA -->
+<section id="db" class="container services">
+  <div class="section-title">Dados & Bancos de Dados</div>
+  <h2 class="section-heading">Organização, relatórios e visão de negócio</h2>
+
+  <p class="hero-subtitle">
+    Estruturamos e analisamos dados para que você tenha clareza sobre estoque,
+    vendas, clientes e finanças.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Bancos de dados</div>
+      <div class="card-title">Modelagem e organização</div>
+      <ul>
+        <li>Modelagem de banco relacional</li>
+        <li>Queries e relatórios sob demanda</li>
+        <li>Boas práticas de segurança e acesso</li>
+      </ul>
+    </article>
+
+    <article class="card" id="ia">
+      <div class="card-label">ML / IA</div>
+      <div class="card-title">Primeiros passos em inteligência aplicada</div>
+      <ul>
+        <li>Análise básica de dados com apoio de IA</li>
+        <li>Insights para operação e tomada de decisão</li>
+        <li>Propostas de automação inteligente sob consulta</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- CHATBOTS -->
+<section id="chatbots" class="container services">
+  <div class="section-title">Chatbots</div>
+  <h2 class="section-heading">Atendimento automático com toque humano</h2>
+
+  <p class="hero-subtitle">
+    Desenvolvemos chatbots personalizados para atendimento em sites, WhatsApp e redes sociais,
+    com fluxos pensados para suporte, vendas e agendamentos.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Canais</div>
+      <div class="card-title">Onde o bot atua</div>
+      <ul>
+        <li>Site institucional</li>
+        <li>WhatsApp Business</li>
+        <li>Integração com redes sociais</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Fluxos</div>
+      <div class="card-title">Atendimento sob medida</div>
+      <ul>
+        <li>Roteiros de atendimento personalizados</li>
+        <li>Respostas para dúvidas frequentes</li>
+        <li>Coleta de dados e encaminhamento para equipe humana</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- HOSPEDAGEM -->
+<section id="hosting" class="container services">
+  <div class="section-title">Hospedagem & Cloud</div>
+  <h2 class="section-heading">Infraestrutura em nuvem para o seu projeto</h2>
+
+  <p class="hero-subtitle">
+    A Code Shield orienta e configura a melhor infraestrutura para o seu site ou sistema,
+    sempre utilizando provedores oficiais e confiáveis.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Nuvem</div>
+      <div class="card-title">Provedores pagos</div>
+      <ul>
+        <li>Hospedagem em nuvem (AWS, Azure, etc.)</li>
+        <li>Ambiente escalável e seguro</li>
+        <li>Cobrança feita diretamente pelos provedores</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Camada extra</div>
+      <div class="card-title">Cloudflare</div>
+      <ul>
+        <li>DNS gerenciado e proteção contra ataques comuns</li>
+        <li>CDN para acelerar o carregamento do site</li>
+        <li>Planos gratuitos e pagos conforme a necessidade</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Opção econômica</div>
+      <div class="card-title">Servidor europeu ASP.NET</div>
+      <ul>
+        <li>Hospedagem gratuita para projetos específicos</li>
+        <li>Ideal para demonstrações e sites institucionais</li>
+        <li>Configuração cuidada pela Code Shield</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- MARKETING DIGITAL -->
+<section id="marketing" class="container services">
+  <div class="section-title">Marketing Digital</div>
+  <h2 class="section-heading">Tráfego, marca e conversão</h2>
+
+  <p class="hero-subtitle">
+    Unimos tecnologia e estratégia para gerar visibilidade real nas redes sociais e
+    transformar atenção em oportunidades de venda.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Campanhas</div>
+      <div class="card-title">Anúncios em múltiplas plataformas</div>
+      <ul>
+        <li>Facebook e Instagram Ads</li>
+        <li>YouTube e TikTok Ads</li>
+        <li>Segmentação básica de público</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Criação</div>
+      <div class="card-title">Slogans e materiais digitais</div>
+      <ul>
+        <li>Criação de slogans e frases de impacto</li>
+        <li>Flyers digitais com hyperlinks</li>
+        <li>Links diretos para o site ou WhatsApp do cliente</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- AUDITORIAS -->
+<section id="auditorias" class="container services">
+  <div class="section-title">Auditorias</div>
+  <h2 class="section-heading">Conformidade, segurança e boas práticas</h2>
+
+  <p class="hero-subtitle">
+    Serviços de auditoria presenciais ou remotos para analisar procedimentos de
+    tecnologia, bancos de dados e segurança da informação.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Conformidade</div>
+      <div class="card-title">LGPD e padrões de segurança</div>
+      <ul>
+        <li>Análise de tratamento e armazenamento de dados</li>
+        <li>Verificação de acessos, permissões e backups</li>
+        <li>Alinhamento às boas práticas da família ISO 27000</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Relatórios</div>
+      <div class="card-title">Visão técnica e executiva</div>
+      <ul>
+        <li>Relatório técnico detalhado</li>
+        <li>Resumo executivo para gestores</li>
+        <li>Plano de ação sugerido</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<!-- MANUTENÇÃO PREVENTIVA -->
+<section id="manutencao" class="container services">
+  <div class="section-title">Manutenção Preventiva</div>
+  <h2 class="section-heading">Pacotes mensais de cuidado contínuo</h2>
+
+  <p class="hero-subtitle">
+    Em vez de apagar incêndios, a Code Shield trabalha para evitar que eles comecem.
+    Oferecemos planos mensais de manutenção preventiva para sites, sistemas e infraestrutura.
+  </p>
+
+  <div class="grid">
+    <article class="card">
+      <div class="card-label">Plano Essencial</div>
+      <div class="card-title">Para quem está começando</div>
+      <ul>
+        <li>Correções pontuais e pequenos ajustes</li>
+        <li>Verificações periódicas básicas</li>
+        <li>Suporte remoto em horário comercial</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <div class="card-label">Plano Plus</div>
+      <div class="card-title">Cobertura ampliada</div>
+      <ul>
+        <li>Atualizações recorrentes de sistemas e bibliotecas</li>
+        <li>Revisões de segurança e performance</li>
+        <li>Melhorias contínuas e priorização no atendimento</li>
+      </ul>
+      <p style="font-size: .8rem; color: #9ca3af; margin-top: .4rem;">
+        *Os valores podem variar conforme a quantidade de sistemas, usuários e
+        criticidade do ambiente. Tabela detalhada disponibilizada sob consulta.
+      </p>
+    </article>
+  </div>
+</section>
 
       <section id="sobre" class="container sobre">
         <div class="section-title">Sobre</div>
@@ -698,6 +1160,14 @@
     sideMenu.classList.remove("open");
     backdrop.classList.remove("show");
     hamburger.classList.remove("active");
+  });
+
+   document.querySelectorAll("#sideMenu a").forEach((link) => {
+    link.addEventListener("click", () => {
+      sideMenu.classList.remove("open");
+      backdrop.classList.remove("show");
+      hamburger.classList.remove("active");
+    });
   });
 </script>
  </body>
