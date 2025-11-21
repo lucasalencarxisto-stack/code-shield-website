@@ -14,6 +14,112 @@
     />
 
     <style>
+      
+/* === MENU HAMBURGER === */
+
+.hamburger {
+  position: fixed;
+  top: 22px;
+  right: 22px;
+  width: 42px;
+  height: 36px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+/* === MENU LATERAL === */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  height: 100%;
+  width: 260px;
+  background: rgba(10, 15, 30, 0.95);
+  backdrop-filter: blur(12px);
+  border-right: 1px solid rgba(148, 163, 184, 0.25);
+  padding: 2rem 1.2rem;
+  z-index: 1999;
+  transition: 0.35s ease;
+}
+
+.side-menu.open {
+  left: 0;
+}
+
+.side-menu-header {
+  margin-bottom: 1.3rem;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+}
+
+.side-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.side-menu a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.92rem;
+  transition: 0.2s ease;
+}
+
+.side-menu a:hover {
+  color: var(--accent);
+  margin-left: 6px;
+}
+
+/* === BACKDROP === */
+   .backdrop {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.45);
+     backdrop-filter: blur(3px);
+     opacity: 0;
+     pointer-events: none;
+     z-index: 1500;
+
+     /* animação PRO */
+     transition: opacity .28s ease, backdrop-filter .28s ease;
+}
+
+   .backdrop.show {
+     opacity: 1;
+     pointer-events: all;
+}
+
+/* Transformação do ícone quando abre */
+     .hamburger.active span:nth-child(1) {
+       transform: rotate(45deg) translateY(12px);
+}
+     .hamburger.active span:nth-child(2) {
+       opacity: 0;
+}
+      .hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translateY(-12px);
+}
+
+      
       :root {
         --bg: #050816;
         --bg-card: #0b1120;
@@ -114,43 +220,6 @@
         color: var(--muted);
         text-transform: uppercase;
         letter-spacing: 0.16em;
-      }
-
-      .nav-links {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-        font-size: 0.9rem;
-      }
-
-      .nav-links a {
-        color: var(--muted);
-        position: relative;
-      }
-
-      .nav-links a::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -4px;
-        width: 0;
-        height: 2px;
-        border-radius: 999px;
-        background: linear-gradient(to right, var(--accent), var(--danger));
-        transition: width 0.2s ease-out;
-      }
-
-      .nav-links a:hover {
-        color: var(--text);
-      }
-
-      .nav-links a:hover::after {
-        width: 100%;
-      }
-
-      .nav-links a:focus-visible {
-        outline: 2px solid var(--accent);
-        outline-offset: 3px;
       }
 
       .btn-primary {
@@ -423,10 +492,6 @@
           order: -1;
         }
 
-        .nav-links {
-          display: none;
-        }
-
         .grid {
           grid-template-columns: minmax(0, 1fr);
         }
@@ -434,29 +499,47 @@
     </style>
   </head>
   <body>
-    <header>
-      <div class="container nav">
-        <div class="logo">
-          <div class="logo-icon">CS</div>
-          <div>
-            <div class="logo-text-main">Code Shield</div>
-            <div class="logo-text-sub">
-              Cyber Security & Dev Solutions
-            </div>
-          </div>
+   <header>
+  <div class="container nav">
+    <div class="logo">
+      <div class="logo-icon">CS</div>
+      <div>
+        <div class="logo-text-main">Code Shield</div>
+        <div class="logo-text-sub">
+          Cyber Security & Dev Solutions
         </div>
-
-        <nav class="nav-links">
-          <a href="#services">Serviços</a>
-          <a href="#sobre">Sobre</a>
-          <a href="#contato">Contato</a>
-          <a href="#contato" class="btn-primary">
-            Falar sobre um projeto
-            <span>➜</span>
-          </a>
-        </nav>
       </div>
-    </header>
+    </div>
+  </div>
+</header>
+<button class="hamburger" id="hamburgerBtn">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+<nav id="sideMenu" class="side-menu">
+ <div class="side-menu-header">
+    <h3>MENU</h3>
+  </div>
+ <ul>
+    <li><a href="#services">Serviços</a></li>
+    <li><a href="#infra">Infraestrutura & Cloud</a></li>
+    <li><a href="#cyber">Cibersegurança</a></li>
+    <li><a href="#websites">Websites</a></li>
+    <li><a href="#software">Software sob medida</a></li>
+    <li><a href="#apps">Aplicativos</a></li>
+    <li><a href="#db">Análise de Dados & Bancos</a></li>
+    <li><a href="#ia">ML / IA</a></li>
+    <li><a href="#chatbots">Chatbots personalizados</a></li>
+    <li><a href="#hosting">Hospedagem / Cloudflare / ASP.NET</a></li>
+    <li><a href="#marketing">Marketing Digital</a></li>
+    <li><a href="#auditorias">Auditorias</a></li>
+    <li><a href="#manutencao">Manutenção Preventiva</a></li>
+    <li><a href="#contato">Contato</a></li>
+  </ul>
+</nav>
+ <div id="menuBackdrop" class="backdrop">
+ </div>
 
     <main>
       <section class="container hero">
@@ -600,5 +683,22 @@
         negócios.
       </div>
     </footer>
-  </body>
-</html>
+<script>
+  const hamburger = document.getElementById("hamburgerBtn");
+  const sideMenu = document.getElementById("sideMenu");
+  const backdrop = document.getElementById("menuBackdrop");
+
+  hamburger.addEventListener("click", () => {
+    sideMenu.classList.toggle("open");
+    backdrop.classList.toggle("show");
+    hamburger.classList.toggle("active");
+  });
+
+  backdrop.addEventListener("click", () => {
+    sideMenu.classList.remove("open");
+    backdrop.classList.remove("show");
+    hamburger.classList.remove("active");
+  });
+</script>
+ </body>
+  </html>
