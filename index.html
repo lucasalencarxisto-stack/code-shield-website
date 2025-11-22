@@ -66,6 +66,7 @@
         top: 0;
         z-index: 10;
         backdrop-filter: blur(16px);
+        padding-bottom: 0.7rem;
         background: linear-gradient(
           to bottom,
           rgba(2, 6, 23, 0.95),
@@ -89,15 +90,18 @@
         filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
       }
 
-      .hero-text h1 {
-        font-size: 2.4rem;
-        letter-spacing: 0.08em;
+      .logo-text {
+        width: 260px;  
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
       }
 
-      .hero-text p {
-        margin-top: 0.4rem;
-        font-size: 1rem;
-        color: #9ca3af;
+      .hero-text {
+        flex: 1;
+        display: flex;
+        justify-content: center;
       }
 
       @media (max-width: 768px) {
@@ -427,28 +431,32 @@
   <body>
     <!-- TOPO COM LOGO -->
     <header>
-      <div class="hero">
-        <img
-          src="assets/img/logo-code-shield.png"
-          alt="Logo Code Shield"
-          width="200"
-          class="logo-hero"
-        />
-        <div class="hero-text">
-          <h1>Code Shield</h1>
-          <p>Segurança &amp; Soluções em TI</p>
-        </div>
-      </div>
-    </header>
+  <div class="hero">
 
-    <!-- BOTÃO HAMBURGER -->
-    <button class="hamburger" id="hamburgerBtn">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <img
+      src="assets/img/logo-code-shield.png"
+      alt="Logo Code Shield"
+      width="200"
+      class="logo-hero"
+    />
 
-    <!-- MENU LATERAL -->
+    <div class="hero-text">
+      <img 
+        src="assets/img/logo-code-shield-full.png"
+        alt="Code Shield Logo Text"
+        class="logo-text"
+      />
+    </div>
+  
+  </div>
+   <!-- BOTÃO HAMBURGER -->
+  <button class="hamburger" id="hamburgerBtn">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</header>
+   <!-- MENU LATERAL -->
     <nav id="sideMenu" class="side-menu">
       <div class="side-menu-header">
         <h3>MENU</h3>
