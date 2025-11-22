@@ -14,165 +14,10 @@
     />
 
     <style>
-      
       html {
-  scroll-behavior: smooth;
-}
+        scroll-behavior: smooth;
+      }
 
-section {
-  padding-top: 4rem;
-}
-
-section:target {
-  outline: 2px solid #38bdf8;
-  scroll-margin-top: 80px;
-}
-
-body {
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  background: #020617; 
-  color: #e5e7eb;
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  gap: 1.5rem;
-  padding: 2.5rem 8vw;
-}
-
-.logo-hero {
-  width: 160px;      
-  height: auto;
-  display: block;
-  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
-}
-
-.hero-text h1 {
-  font-size: 2.4rem;
-  letter-spacing: 0.08em;
-}
-
-.hero-text p {
-  margin-top: 0.4rem;
-  font-size: 1rem;
-  color: #9ca3af;
-}
-
-@media (max-width: 768px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* === MENU HAMBURGER === */
-
-.hamburger {
-  position: fixed;
-  top: 22px;
-  left: 22px;
-  right: auto;
-  width: 42px;
-  height: 36px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 2000;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.hamburger span {
-  width: 100%;
-  height: 4px;
-  background: var(--accent);
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-/* === MENU LATERAL === */
-.side-menu {
-  position: fixed;
-  top: 0;
-  left: -260px;
-  height: 100%;
-  width: 260px;
-  background: rgba(10, 15, 30, 0.95);
-  backdrop-filter: blur(12px);
-  border-right: 1px solid rgba(148, 163, 184, 0.25);
-  padding: 2rem 1.2rem;
-  z-index: 1999;
-  transition: 0.35s ease;
-}
-
-.side-menu.open {
-  left: 0;
-}
-
-.side-menu-header {
-  margin-bottom: 1.3rem;
-  color: var(--accent);
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 0.85rem;
-}
-
-.side-menu ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.side-menu a {
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.92rem;
-  transition: 0.2s ease;
-}
-
-.side-menu a:hover {
-  color: var(--accent);
-  margin-left: 6px;
-}
-
-/* === BACKDROP === */
-   .backdrop {
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background: rgba(0,0,0,0.45);
-     backdrop-filter: blur(3px);
-     opacity: 0;
-     pointer-events: none;
-     z-index: 1500;
-
-     /* animação PRO */
-     transition: opacity .28s ease, backdrop-filter .28s ease;
-}
-
-   .backdrop.show {
-     opacity: 1;
-     pointer-events: all;
-}
-
-/* Transformação do ícone quando abre */
-     .hamburger.active span:nth-child(1) {
-       transform: rotate(45deg) translateY(12px);
-}
-     .hamburger.active span:nth-child(2) {
-       opacity: 0;
-}
-      .hamburger.active span:nth-child(3) {
-  transform: rotate(-45deg) translateY(-12px);
-}
-
-      
       :root {
         --bg: #050816;
         --bg-card: #0b1120;
@@ -215,6 +60,7 @@ body {
         padding: 0 1.5rem;
       }
 
+      /* HEADER / HERO TOPO */
       header {
         position: sticky;
         top: 0;
@@ -229,92 +75,137 @@ body {
         border-bottom: 1px solid rgba(148, 163, 184, 0.18);
       }
 
-      .nav {
+      .hero {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        padding: 1rem 0;
+        gap: 1.5rem;
+        padding: 2.5rem 8vw 1.5rem;
       }
 
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 0.6rem;
+      .logo-hero {
+        width: 160px;
+        height: auto;
+        display: block;
+        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
       }
 
-      .logo-icon {
-        width: 36px;
-        height: 36px;
-        border-radius: 999px;
-        border: 1px solid rgba(148, 163, 184, 0.5);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 0 22px rgba(56, 189, 248, 0.4);
-        background: radial-gradient(
-          circle at 30% 0,
-          #38bdf8,
-          #0f172a 60%
-        );
-        font-weight: 700;
-        font-size: 0.9rem;
-      }
-
-      .logo-text-main {
-        font-size: 1.15rem;
-        font-weight: 600;
+      .hero-text h1 {
+        font-size: 2.4rem;
         letter-spacing: 0.08em;
-        text-transform: uppercase;
       }
 
-      .logo-text-sub {
-        font-size: 0.68rem;
-        font-weight: 400;
-        color: var(--muted);
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-      }
-
-      .btn-primary {
-        padding: 0.55rem 1.2rem;
-        border-radius: 999px;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        background: linear-gradient(
-          135deg,
-          var(--accent-strong),
-          var(--danger)
-        );
-        color: #0b1120;
-        font-weight: 600;
-        font-size: 0.9rem;
-        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
-      }
-
-      .btn-primary span {
+      .hero-text p {
+        margin-top: 0.4rem;
         font-size: 1rem;
+        color: #9ca3af;
       }
 
-      .btn-ghost {
-        padding: 0.55rem 1.2rem;
-        border-radius: 999px;
-        border: 1px solid rgba(148, 163, 184, 0.6);
+      @media (max-width: 768px) {
+        .hero {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+
+      /* === MENU HAMBURGER === */
+      .hamburger {
+        position: fixed;
+        top: 22px;
+        left: 22px;
+        width: 42px;
+        height: 36px;
         background: transparent;
-        color: var(--text);
-        font-weight: 500;
-        font-size: 0.9rem;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.4rem;
+        border: none;
         cursor: pointer;
+        z-index: 2000;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
       }
 
-      .btn-ghost span {
-        font-size: 1rem;
+      .hamburger span {
+        width: 100%;
+        height: 4px;
+        background: var(--accent);
+        border-radius: 8px;
+        transition: 0.3s ease;
+      }
+
+      /* === MENU LATERAL === */
+      .side-menu {
+        position: fixed;
+        top: 0;
+        left: -260px;
+        height: 100%;
+        width: 260px;
+        background: rgba(10, 15, 30, 0.95);
+        backdrop-filter: blur(12px);
+        border-right: 1px solid rgba(148, 163, 184, 0.25);
+        padding: 2rem 1.2rem;
+        z-index: 1999;
+        transition: 0.35s ease;
+      }
+
+      .side-menu.open {
+        left: 0;
+      }
+
+      .side-menu-header {
+        margin-bottom: 1.3rem;
+        color: var(--accent);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 0.85rem;
+      }
+
+      .side-menu ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .side-menu a {
+        color: var(--text);
+        text-decoration: none;
+        font-size: 0.92rem;
+        transition: 0.2s ease;
+      }
+
+      .side-menu a:hover {
+        color: var(--accent);
+        margin-left: 6px;
+      }
+
+      /* === BACKDROP === */
+      .backdrop {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.45);
+        backdrop-filter: blur(3px);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1500;
+        transition: opacity 0.28s ease, backdrop-filter 0.28s ease;
+      }
+
+      .backdrop.show {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      /* Transformação do ícone quando abre */
+      .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translateY(12px);
+      }
+      .hamburger.active span:nth-child(2) {
+        opacity: 0;
+      }
+      .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translateY(-12px);
       }
 
       main {
@@ -329,6 +220,12 @@ body {
         padding-top: 3rem;
       }
 
+      @media (max-width: 880px) {
+        .hero-main {
+          grid-template-columns: minmax(0, 1fr);
+          padding-top: 2rem;
+        }
+      }
 
       .hero-kicker {
         font-size: 0.78rem;
@@ -412,8 +309,8 @@ body {
       }
 
       .hero-matrix {
-        font-family: ui-monospace, Menlo, Monaco, Consolas,
-          "Liberation Mono", "Courier New", monospace;
+        font-family: ui-monospace, Menlo, Monaco, Consolas, "Liberation Mono",
+          "Courier New", monospace;
         font-size: 0.78rem;
         line-height: 1.55;
         color: #9ca3af;
@@ -442,10 +339,6 @@ body {
         margin-top: 1rem;
         font-size: 0.75rem;
         color: var(--muted);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 0.7rem;
       }
 
       .hero-tagline {
@@ -456,75 +349,28 @@ body {
         color: var(--muted);
       }
 
-      .services {
-        padding: 2rem 0 0;
-      }
-
-      section {
-        scroll-margin-top: 90px; 
-      }
-
-      .section-title {
-        font-size: 0.85rem;
-        letter-spacing: 0.18em;
-        text-transform: uppercase;
-        color: var(--muted);
-        margin-bottom: 0.4rem;
-      }
-
-      .section-heading {
-        font-size: 1.35rem;
-        margin-bottom: 1.4rem;
-      }
-
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 1.2rem;
-      }
-
-      .card {
-        background: radial-gradient(
-          circle at top,
-          rgba(15, 23, 42, 0.9),
-          rgba(15, 23, 42, 0.85)
+      .btn-primary {
+        padding: 0.55rem 1.2rem;
+        border-radius: 999px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        background: linear-gradient(
+          135deg,
+          var(--accent-strong),
+          var(--danger)
         );
-        border-radius: var(--radius-xl);
-        border: 1px solid rgba(148, 163, 184, 0.25);
-        padding: 1rem;
-        box-shadow: var(--shadow-soft);
-        display: flex;
-        flex-direction: column;
-        gap: 0.6rem;
-        font-size: 0.86rem;
-      }
-
-      .card-label {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 0.16em;
-        color: var(--accent);
-      }
-
-      .card-title {
-        font-size: 1rem;
+        color: #0b1120;
         font-weight: 600;
+        font-size: 0.9rem;
+        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
       }
 
-      .card p {
-        color: var(--muted);
-      }
-
-      .card ul {
-        margin-left: 1.1rem;
-        color: var(--muted);
-        font-size: 0.8rem;
-        display: grid;
-        gap: 0.15rem;
-      }
-
-      .card ul li::marker {
-        color: var(--accent);
+      .btn-primary span {
+        font-size: 1rem;
       }
 
       footer {
@@ -539,68 +385,64 @@ body {
       footer span {
         color: var(--accent);
       }
-
-      @media (max-width: 880px) {
-        .hero-main {
-          grid-template-columns: minmax(0, 1fr);
-          padding-top: 3rem;
-        }
-
-        .hero-right {
-          order: -1;
-        }
-
-        .grid {
-          grid-template-columns: minmax(0, 1fr);
-        }
-      }
     </style>
   </head>
-  <body>
-     <header class="hero">
- <img
-  src="./assets/img/logo-code-shield.png"
-  alt="Logo Code Shield"
-  width="200"
-  class="logo-hero"
-/>
-  <div class="hero-text">
-      <h1>Code Shield</h1>
-      <p>Segurança & Soluções em TI</p>
-    </div>
-  </header>
-<button class="hamburger" id="hamburgerBtn">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-<nav id="sideMenu" class="side-menu">
- <div class="side-menu-header">
-    <h3>MENU</h3>
-  </div>
- <ul>
-    <li><a href="#services">Serviços</a></li>
-    <li><a href="#cyber">Cibersegurança</a></li>
-    <li><a href="#websites">Websites</a></li>
-    <li><a href="#software">Software sob medida</a></li>
-    <li><a href="#apps">Aplicativos</a></li>
-    <li><a href="#db">Análise de Dados & Bancos</a></li>
-    <li><a href="#ia">ML / IA</a></li>
-    <li><a href="#chatbots">Chatbots personalizados</a></li>
-    <li><a href="#hosting">Hospedagem / Cloudflare / ASP.NET</a></li>
-    <li><a href="#marketing">Marketing Digital</a></li>
-    <li><a href="#auditorias">Auditorias</a></li>
-    <li><a href="#manutencao">Manutenção Preventiva</a></li>
-    <li><a href="#contato">Contato</a></li>
-  </ul>
-</nav>
- <div id="menuBackdrop" class="backdrop">
- </div>
 
+  <body>
+    <!-- TOPO COM LOGO -->
+    <header>
+      <div class="hero">
+        <img
+          src="assets/img/logo-code-shield.png"
+          alt="Logo Code Shield"
+          width="200"
+          class="logo-hero"
+        />
+        <div class="hero-text">
+          <h1>Code Shield</h1>
+          <p>Segurança &amp; Soluções em TI</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- BOTÃO HAMBURGER -->
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <!-- MENU LATERAL -->
+    <nav id="sideMenu" class="side-menu">
+      <div class="side-menu-header">
+        <h3>MENU</h3>
+      </div>
+      <ul>
+        <li><a href="servicos.html#services">Serviços</a></li>
+        <li><a href="servicos.html#cyber">Cibersegurança</a></li>
+        <li><a href="servicos.html#websites">Websites</a></li>
+        <li><a href="servicos.html#software">Software sob medida</a></li>
+        <li><a href="servicos.html#apps">Aplicativos</a></li>
+        <li><a href="servicos.html#db">Análise de Dados &amp; Bancos</a></li>
+        <li><a href="servicos.html#ia">ML / IA</a></li>
+        <li><a href="servicos.html#chatbots">Chatbots personalizados</a></li>
+        <li>
+          <a href="servicos.html#hosting">Hospedagem / Cloudflare / ASP.NET</a>
+        </li>
+        <li><a href="servicos.html#marketing">Marketing Digital</a></li>
+        <li><a href="servicos.html#auditorias">Auditorias</a></li>
+        <li><a href="servicos.html#manutencao">Manutenção Preventiva</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+
+    <div id="menuBackdrop" class="backdrop"></div>
+
+    <!-- HERO PRINCIPAL (SALA DE ESTAR) -->
     <main>
       <section class="container hero-main">
         <div>
-          <div class="hero-kicker">Startup de tecnologia & segurança</div>
+          <div class="hero-kicker">Startup de tecnologia &amp; segurança</div>
           <h1 class="hero-title">
             Blindando o futuro digital<br />
             com <span>código, segurança e estratégia</span>.
@@ -613,14 +455,15 @@ body {
           </p>
 
           <div class="hero-actions">
-            <button class="btn-primary">
+            <a
+              href="https://wa.me/5513997100889?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Code%20Shield%20e%20quero%20um%20diagn%C3%B3stico%20gr%C3%A1tis."
+              class="btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Quero um diagnóstico grátis
               <span>⚡</span>
-            </button>
-            <button class="btn-ghost">
-              Ver serviços
-              <span>↓</span>
-            </button>
+            </a>
           </div>
         </div>
 
@@ -639,7 +482,8 @@ body {
               <span class="key">stack</span>:
               <span class="val-orange">
                 ["Web Security", "Infra básica", "Web dev"]
-              </span><br />
+              </span
+              ><br />
               <span class="key">risco_inicial</span>:
               <span class="val-orange">"ALTO"</span><br />
               <span class="key">risco_atual</span>:
@@ -649,7 +493,8 @@ body {
               <span class="key">uptime_site</span>:
               <span class="val-green">"99.9%"</span><br />
               <span class="key">status</span>:
-              <span class="val-green">"Operação segura & em crescimento"</span
+              <span class="val-green"
+                >"Operação segura &amp; em crescimento"</span
               ><br />
             </div>
             <div class="hero-footer-note">
@@ -660,515 +505,40 @@ body {
           </div>
         </div>
       </section>
-
-      <section id="services" class="container services">
-        <div class="section-title">Serviços</div>
-        <h2 class="section-heading">
-          O que a Code Shield faz pela sua empresa
-        </h2>
-
-        <div class="grid">
-          <article class="card">
-            <div class="card-label">Front-end & Branding</div>
-            <div class="card-title">
-              Sites modernos e interfaces impressionantes
-            </div>
-            <p>
-              Desenvolvimento de websites profissionais que passam confiança,
-              credibilidade e domínio técnico — feitos para converter visitantes
-              em clientes.
-            </p>
-            <ul>
-              <li>Landing pages rápidas e responsivas</li>
-              <li>Layouts modernos com foco em conversão</li>
-              <li>Integração com redes sociais e WhatsApp</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-label">Cyber Blue Team</div>
-            <div class="card-title">
-              Segurança básica acessível para pequenos negócios
-            </div>
-            <p>
-              Antes de sofrer um ataque e perder seus dados, sua empresa pode
-              adotar boas práticas de segurança que já fazem enorme diferença no
-              dia a dia.
-            </p>
-            <ul>
-              <li>Higiene digital e orientação de boas práticas</li>
-              <li>Mapeamento simples de riscos mais comuns</li>
-              <li>Apoio à organização de acessos e senhas</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-label">Soluções em TI</div>
-            <div class="card-title">
-              Automação e organização de dados
-            </div>
-            <p>
-              Pequenas automações e sistemas sob medida que tiram sua operação
-              do papel e das planilhas improvisadas.
-            </p>
-            <ul>
-              <li>Organização básica de estoques e clientes</li>
-              <li>Fluxos simples para o dia a dia</li>
-              <li>Visão clara dos dados que importam</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-      <!-- WEBSITES / VITRINE DIGITAL -->
-<section id="websites" class="container services">
-  <div class="section-title">Websites</div>
-  <h2 class="section-heading">Sites profissionais e vitrines digitais</h2>
-
-  <p class="hero-subtitle">
-    Desenvolvemos websites sob medida para posicionar sua marca de forma profissional,
-    com foco em velocidade, confiança e conversão de visitantes em clientes.
-  </p>
-
-  <div class="card" style="margin-top: 1rem;">
-    <div class="card-label">Modelo de demonstração</div>
-    <div class="card-title">Alexandre Lanchonete (site vitrine)</div>
-    <p>
-      Exemplo de site para lanchonete & E-commerce, com cadastro de produtos, gestão de pedidos
-      e interface moderna:
-      <br />
-      🔗
-      <a href="https://alexandrelanchonete.runasp.net" target="_blank" rel="noopener noreferrer">
-        alexandrelanchonete.runasp.net
-      </a>
-     </p>
-    <p>
-      <strong>Importante:</strong> este site é um <strong>modelo demonstração</strong>.
-      Cada cliente pode <strong>personalizar totalmente</strong> o layout, as cores,
-      os textos, as páginas e as funcionalidades de acordo com a identidade do negócio.
-    </p>
-  </div>
-
-  <div class="grid" style="margin-top: 1.2rem;">
-    <article class="card">
-      <div class="card-label">Presença digital</div>
-      <div class="card-title">Sites institucionais e landing pages</div>
-      <ul>
-        <li>Páginas modernas, responsivas e rápidas</li>
-        <li>Foco em conversão: CTA claros e objetivos</li>
-        <li>Integração com WhatsApp, redes sociais e mapas</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Personalização total</div>
-      <div class="card-title">Layout alinhado ao seu negócio</div>
-      <ul>
-        <li>Cores, logotipo e identidade visual do cliente</li>
-        <li>Textos profissionais e linguagem estratégica</li>
-        <li>Elementos visuais pensados para o público-alvo</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Hospedagem</div>
-      <div class="card-title">Infraestrutura para o seu site</div>
-      <ul>
-        <li>Hospedagem em nuvem (AWS, Azure, etc.) – investimento direto nos provedores</li>
-        <li>Uso de Cloudflare para performance, CDN e proteção extra</li>
-        <li>Opção de hospedagem gratuita em servidor europeu ASP.NET (RunASP)</li>
-      </ul>
-      <p style="font-size: .78rem; color: #9ca3af; margin-top: .4rem;">
-        *Os custos de hospedagem são pagos diretamente às plataformas
-        (provedores oficiais). A Code Shield orienta na escolha e faz toda a configuração.
-      </p>
-    </article>
-  </div>
-</section>
-
-<!-- CIBERSEGURANÇA -->
-<section id="cyber" class="container services">
-  <div class="section-title">Cibersegurança</div>
-  <h2 class="section-heading">Blue Team completo para proteger o seu negócio</h2>
-
-  <p class="hero-subtitle">
-    Atuamos no modelo Blue Team, reforçando suas defesas digitais e reduzindo a superfície
-    de ataque antes que incidentes aconteçam.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Análises e testes</div>
-      <div class="card-title">Varreduras e Pentests</div>
-      <ul>
-        <li>Varredura de vulnerabilidades e mapeamento de superfície de ataque</li>
-        <li>Testes de intrusão (pentest) em modo White, Grey e Black Box</li>
-        <li>Relatórios técnicos e executivos com plano de ação</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Plataforma Code Shield</div>
-      <div class="card-title">Software de segurança em desenvolvimento</div>
-      <p>
-        Estamos desenvolvendo um software próprio focado em monitorar riscos,
-        registros críticos e pontos sensíveis da operação do cliente.
-      </p>
-      <ul>
-        <li>Monitoramento de segurança adaptado ao seu ambiente</li>
-        <li>Alertas, registros e visão centralizada de eventos</li>
-        <li>Versão personalizada sob demanda para sua empresa</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Governança</div>
-      <div class="card-title">Boas práticas e orientação</div>
-      <ul>
-        <li>Organização de acessos, senhas e usuários</li>
-        <li>Recomendações de backups e proteção de dados</li>
-        <li>Apoio para adequação à LGPD em conjunto com auditorias</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- SOFTWARE SOB MEDIDA -->
-<section id="software" class="container services">
-  <div class="section-title">Software</div>
-  <h2 class="section-heading">Sistemas sob medida para o seu tipo de negócio</h2>
-
-  <p class="hero-subtitle">
-    Desenvolvemos sistemas personalizados para empresas que precisam sair da planilha
-    e ganhar organização, controle e previsibilidade.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Segmentos</div>
-      <div class="card-title">Onde atuamos</div>
-      <ul>
-        <li>Lojas e comércios em geral</li>
-        <li>Restaurantes, lanchonetes e delivery</li>
-        <li>Empresas de serviços e escritórios</li>
-        <li>Controle de estoque e almoxarifado</li>
-        <li>Gestão financeira e fluxo de caixa</li>
-        <li>Hotelaria e hospedagem</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Customização</div>
-      <div class="card-title">Funciona do jeito que você trabalha</div>
-      <ul>
-        <li>Campos, telas e relatórios personalizados</li>
-        <li>Processos alinhados à rotina da sua equipe</li>
-        <li>Integrações sob demanda (APIs, gateways, etc.)</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Modelo comercial</div>
-      <div class="card-title">Projetos por pacote</div>
-      <p>
-        Trabalhamos com pacotes <strong>básico</strong>, <strong>intermediário</strong>
-        e <strong>avançado</strong>, dimensionados conforme o tamanho do projeto.
-      </p>
-      <p style="font-size: .8rem; color: #9ca3af; margin-top: .3rem;">
-        Para tabela de valores detalhada, entre em contato pelo WhatsApp e receba
-        uma proposta alinhada à realidade do seu negócio.
-      </p>
-    </article>
-  </div>
-</section>
-
-<!-- APPS -->
-<section id="apps" class="container services">
-  <div class="section-title">Aplicativos</div>
-  <h2 class="section-heading">Apps que colocam sua marca no bolso do cliente</h2>
-
-  <p class="hero-subtitle">
-    Aplicativos para Android e, sob demanda, outras plataformas, com foco em usabilidade,
-    performance e integração com sua operação.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Funcionalidades</div>
-      <div class="card-title">Apps conectados ao seu sistema</div>
-      <ul>
-        <li>Login seguro e gerenciamento de usuários</li>
-        <li>Integração com banco de dados e APIs</li>
-        <li>Notificações push e comunicação em tempo quase real</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Experiência</div>
-      <div class="card-title">Interface e navegação</div>
-      <ul>
-        <li>Design intuitivo e responsivo</li>
-        <li>Fluxos desenhados para o seu público</li>
-        <li>Identidade visual alinhada à marca</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- DADOS & IA -->
-<section id="db" class="container services">
-  <div class="section-title">Dados & Bancos de Dados</div>
-  <h2 class="section-heading">Organização, relatórios e visão de negócio</h2>
-
-  <p class="hero-subtitle">
-    Estruturamos e analisamos dados para que você tenha clareza sobre estoque,
-    vendas, clientes e finanças.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Bancos de dados</div>
-      <div class="card-title">Modelagem e organização</div>
-      <ul>
-        <li>Modelagem de banco relacional</li>
-        <li>Queries e relatórios sob demanda</li>
-        <li>Boas práticas de segurança e acesso</li>
-      </ul>
-    </article>
-
-    <article class="card" id="ia">
-      <div class="card-label">ML / IA</div>
-      <div class="card-title">Primeiros passos em inteligência aplicada</div>
-      <ul>
-        <li>Análise básica de dados com apoio de IA</li>
-        <li>Insights para operação e tomada de decisão</li>
-        <li>Propostas de automação inteligente sob consulta</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- CHATBOTS -->
-<section id="chatbots" class="container services">
-  <div class="section-title">Chatbots</div>
-  <h2 class="section-heading">Atendimento automático com toque humano</h2>
-
-  <p class="hero-subtitle">
-    Desenvolvemos chatbots personalizados para atendimento em sites, WhatsApp e redes sociais,
-    com fluxos pensados para suporte, vendas e agendamentos.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Canais</div>
-      <div class="card-title">Onde o bot atua</div>
-      <ul>
-        <li>Site institucional</li>
-        <li>WhatsApp Business</li>
-        <li>Integração com redes sociais</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Fluxos</div>
-      <div class="card-title">Atendimento sob medida</div>
-      <ul>
-        <li>Roteiros de atendimento personalizados</li>
-        <li>Respostas para dúvidas frequentes</li>
-        <li>Coleta de dados e encaminhamento para equipe humana</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- HOSPEDAGEM -->
-<section id="hosting" class="container services">
-  <div class="section-title">Hospedagem & Cloud</div>
-  <h2 class="section-heading">Infraestrutura em nuvem para o seu projeto</h2>
-
-  <p class="hero-subtitle">
-    A Code Shield orienta e configura a melhor infraestrutura para o seu site ou sistema,
-    sempre utilizando provedores oficiais e confiáveis.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Nuvem</div>
-      <div class="card-title">Provedores pagos</div>
-      <ul>
-        <li>Hospedagem em nuvem (AWS, Azure, etc.)</li>
-        <li>Ambiente escalável e seguro</li>
-        <li>Cobrança feita diretamente pelos provedores</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Camada extra</div>
-      <div class="card-title">Cloudflare</div>
-      <ul>
-        <li>DNS gerenciado e proteção contra ataques comuns</li>
-        <li>CDN para acelerar o carregamento do site</li>
-        <li>Planos gratuitos e pagos conforme a necessidade</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Opção econômica</div>
-      <div class="card-title">Servidor europeu ASP.NET</div>
-      <ul>
-        <li>Hospedagem gratuita para projetos específicos</li>
-        <li>Ideal para demonstrações e sites institucionais</li>
-        <li>Configuração cuidada pela Code Shield</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- MARKETING DIGITAL -->
-<section id="marketing" class="container services">
-  <div class="section-title">Marketing Digital</div>
-  <h2 class="section-heading">Tráfego, marca e conversão</h2>
-
-  <p class="hero-subtitle">
-    Unimos tecnologia e estratégia para gerar visibilidade real nas redes sociais e
-    transformar atenção em oportunidades de venda.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Campanhas</div>
-      <div class="card-title">Anúncios em múltiplas plataformas</div>
-      <ul>
-        <li>Facebook e Instagram Ads</li>
-        <li>YouTube e TikTok Ads</li>
-        <li>Segmentação básica de público</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Criação</div>
-      <div class="card-title">Slogans e materiais digitais</div>
-      <ul>
-        <li>Criação de slogans e frases de impacto</li>
-        <li>Flyers digitais com hyperlinks</li>
-        <li>Links diretos para o site ou WhatsApp do cliente</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- AUDITORIAS -->
-<section id="auditorias" class="container services">
-  <div class="section-title">Auditorias</div>
-  <h2 class="section-heading">Conformidade, segurança e boas práticas</h2>
-
-  <p class="hero-subtitle">
-    Serviços de auditoria presenciais ou remotos para analisar procedimentos de
-    tecnologia, bancos de dados e segurança da informação.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Conformidade</div>
-      <div class="card-title">LGPD e padrões de segurança</div>
-      <ul>
-        <li>Análise de tratamento e armazenamento de dados</li>
-        <li>Verificação de acessos, permissões e backups</li>
-        <li>Alinhamento às boas práticas da família ISO 27000</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Relatórios</div>
-      <div class="card-title">Visão técnica e executiva</div>
-      <ul>
-        <li>Relatório técnico detalhado</li>
-        <li>Resumo executivo para gestores</li>
-        <li>Plano de ação sugerido</li>
-      </ul>
-    </article>
-  </div>
-</section>
-
-<!-- MANUTENÇÃO PREVENTIVA -->
-<section id="manutencao" class="container services">
-  <div class="section-title">Manutenção Preventiva</div>
-  <h2 class="section-heading">Pacotes mensais de cuidado contínuo</h2>
-
-  <p class="hero-subtitle">
-    Em vez de apagar incêndios, a Code Shield trabalha para evitar que eles comecem.
-    Oferecemos planos mensais de manutenção preventiva para sites, sistemas e infraestrutura.
-  </p>
-
-  <div class="grid">
-    <article class="card">
-      <div class="card-label">Plano Essencial</div>
-      <div class="card-title">Para quem está começando</div>
-      <ul>
-        <li>Correções pontuais e pequenos ajustes</li>
-        <li>Verificações periódicas básicas</li>
-        <li>Suporte remoto em horário comercial</li>
-      </ul>
-    </article>
-
-    <article class="card">
-      <div class="card-label">Plano Plus</div>
-      <div class="card-title">Cobertura ampliada</div>
-      <ul>
-        <li>Atualizações recorrentes de sistemas e bibliotecas</li>
-        <li>Revisões de segurança e performance</li>
-        <li>Melhorias contínuas e priorização no atendimento</li>
-      </ul>
-      <p style="font-size: .8rem; color: #9ca3af; margin-top: .4rem;">
-        *Os valores podem variar conforme a quantidade de sistemas, usuários e
-        criticidade do ambiente. Tabela detalhada disponibilizada sob consulta.
-      </p>
-    </article>
-  </div>
-</section>
-
-      <section id="sobre" class="container sobre">
-        <div class="section-title">Sobre</div>
-        <h2 class="section-heading">Quem está por trás da Code Shield</h2>
-        <p class="hero-subtitle">
-          A Code Shield nasce com a missão de traduzir tecnologia complexa em
-          soluções práticas para negócios reais. Unindo desenvolvimento web,
-          automação e cibersegurança Blue Team, nosso foco é simples: proteger
-          seu caixa enquanto seu negócio cresce com segurança.
-        </p>
-      </section>
     </main>
 
     <footer id="contato">
       <div class="container">
-        © <span>Code Shield</span> — Segurança & Desenvolvimento em TI.
+        © <span>Code Shield</span> — Segurança &amp; Desenvolvimento em TI.
         Transformando código em blindagem digital para pequenos e médios
         negócios.
       </div>
     </footer>
-<script>
-  const hamburger = document.getElementById("hamburgerBtn");
-  const sideMenu = document.getElementById("sideMenu");
-  const backdrop = document.getElementById("menuBackdrop");
 
-  hamburger.addEventListener("click", () => {
-    sideMenu.classList.toggle("open");
-    backdrop.classList.toggle("show");
-    hamburger.classList.toggle("active");
-  });
+    <script>
+      const hamburger = document.getElementById("hamburgerBtn");
+      const sideMenu = document.getElementById("sideMenu");
+      const backdrop = document.getElementById("menuBackdrop");
 
-  backdrop.addEventListener("click", () => {
-    sideMenu.classList.remove("open");
-    backdrop.classList.remove("show");
-    hamburger.classList.remove("active");
-  });
+      hamburger.addEventListener("click", () => {
+        sideMenu.classList.toggle("open");
+        backdrop.classList.toggle("show");
+        hamburger.classList.toggle("active");
+      });
 
-   document.querySelectorAll("#sideMenu a").forEach((link) => {
-    link.addEventListener("click", () => {
-      sideMenu.classList.remove("open");
-      backdrop.classList.remove("show");
-      hamburger.classList.remove("active");
-    });
-  });
-</script>
- </body>
-  </html>
+      backdrop.addEventListener("click", () => {
+        sideMenu.classList.remove("open");
+        backdrop.classList.remove("show");
+        hamburger.classList.remove("active");
+      });
+
+      document.querySelectorAll("#sideMenu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          sideMenu.classList.remove("open");
+          backdrop.classList.remove("show");
+          hamburger.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
