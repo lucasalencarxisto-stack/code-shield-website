@@ -1,4 +1,4 @@
-# Code Shield — Website Oficial
+# Code Shield — Website Oficial: https://code-shield.com/
 
 Bem-vindo ao repositório do **site institucional da Code Shield**, uma startup focada em **Tecnologia, Desenvolvimento Web, Segurança Blue Team e Soluções Digitais** para pequenas e médias empresas.
 
@@ -72,8 +72,8 @@ A **Code Shield** é uma startup que combina tecnologia e segurança para ajudar
 **Lucas Alencar Xisto**
 Dev em evolução — Cybersecurity Enthusiast — Criador da Code Shield
 
-GitHub: *adicione seu link aqui*
-LinkedIn: *adicione seu link aqui*
+GitHub:https://github.com/lucasalencarxisto-stack
+LinkedIn:https://linkedin.com/in/lucasalencar-dev
 
 ---
 
