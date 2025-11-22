@@ -144,6 +144,8 @@
         padding: 2rem 1.2rem;
         z-index: 1999;
         transition: 0.35s ease;
+        max-height: 100vh;
+        overflow-y: auto;
       }
 
       .side-menu.open {
@@ -373,18 +375,52 @@
         font-size: 1rem;
       }
 
-      footer {
-        margin-top: 3rem;
-        padding: 1.5rem 0 2rem;
-        border-top: 1px solid rgba(148, 163, 184, 0.3);
-        font-size: 0.8rem;
-        color: var(--muted);
-        text-align: center;
-      }
+      .footer {
+  background: #0b1120;
+  padding: 60px 0;
+  color: #e5e7eb;
+  margin-top: 80px;
+}
 
-      footer span {
-        color: var(--accent);
-      }
+.footer-title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer-sub {
+  color: #9ca3af;
+  margin-bottom: 40px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.footer-col h3 {
+  margin-bottom: 12px;
+  color: #38bdf8;
+}
+
+.footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-col li {
+  margin-bottom: 8px;
+}
+
+.footer-copy {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
     </style>
   </head>
 
@@ -507,13 +543,34 @@
       </section>
     </main>
 
-    <footer id="contato">
-      <div class="container">
-        © <span>Code Shield</span> — Segurança &amp; Desenvolvimento em TI.
-        Transformando código em blindagem digital para pequenos e médios
-        negócios.
+    <footer id="contato" class="footer">
+  <div class="container">
+    <h2 class="footer-title">Contato</h2>
+
+    <p class="footer-sub">Estamos prontos para atender você com segurança, clareza e eficiência.</p>
+
+    <div class="footer-grid">
+
+      <div class="footer-col">
+        <h3>📧 E-mails</h3>
+        <ul>
+          <li><strong>financeiro@code-shield.com</strong> — despesas e orçamentos</li>
+          <li><strong>security@code-shield.com</strong> — assuntos de segurança</li>
+          <li><strong>lucas.alencar@code-shield.com</strong> — contato pessoal</li>
+          <li><strong>suporte@code-shield.com</strong> — suporte técnico</li>
+        </ul>
       </div>
-    </footer>
+
+      <div class="footer-col">
+        <h3>📱 Telefone</h3>
+        <p><strong>+55 (13) 99710-0889</strong></p>
+      </div>
+
+    </div>
+
+    <p class="footer-copy">© 2025 Code Shield — Segurança & Soluções em TI</p>
+  </div>
+</footer>
 
     <script>
       const hamburger = document.getElementById("hamburgerBtn");
