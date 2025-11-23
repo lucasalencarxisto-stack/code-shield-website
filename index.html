@@ -62,40 +62,41 @@
       }
 
       /* HEADER */
-      header {
-        position: sticky;
-        height: 75px;
-        top: 0;
-        z-index: 10;
-        backdrop-filter: blur(8px);
-        padding-bottom: 0;
-        background: linear-gradient(
-          to bottom,
-          rgba(0, 0, 0, 0.95),
-          rgba(0, 0, 0, 0.75),
-          transparent
-        );
-        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+    header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: auto;
+      padding: 8px 0; 
+      background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.95),
+        rgba(0, 0, 0, 0.75),
+        transparent
+      );
+      border-bottom: 1px solid rgba(148,163,184,0.25);
       }
 
     .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0.3rem 1.5rem 0.2rem; 
-      min-height: 0;                 
+      padding: 0;         
+      margin: 0;
+      min-height: unset;  
+      height: auto;
       }
-
 
       /* LOGO CENTRALIZADO */
     .logo-text {
-      max-width: 430px;
-      transform: scaleX(1.2);
-      height: 75px;
+      width: 420px;       
+      max-width: 90%;     
+      height: auto;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
+      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.8));
       }
+
 
       @media (max-width: 768px) {
         .hero {
