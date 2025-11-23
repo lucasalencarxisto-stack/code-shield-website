@@ -1,83 +1,161 @@
-# Code Shield — Website Oficial: https://code-shield.com/
+## Code Shield Website
 
-Bem-vindo ao repositório do **site institucional da Code Shield**, uma startup focada em **Tecnologia, Desenvolvimento Web, Segurança Blue Team e Soluções Digitais** para pequenas e médias empresas.
+Segurança, Tecnologia & Performance para Empresas que Pensam no Amanhã
 
-Este repositório contém o código-fonte do site desenvolvido inteiramente em **HTML + CSS puro**, com foco em:
+“Onde há vulnerabilidade, trazemos fortaleza. Onde há ruído, entregamos clareza. Onde há dúvidas, implantamos tecnologia.”
 
-* boas práticas de estruturação;
-* design moderno e responsivo;
-* estética futurista e voltada à área de cibersegurança;
-* organização adequada para ser parte do seu portfólio.
+O Code Shield Website é o site oficial da Code Shield — uma startup brasileira focada em entregar soluções inteligentes de TI, cibersegurança, desenvolvimento web, infraestrutura moderna e estratégias digitais de crescimento real para empresas.
 
----
+Este repositório contém o front-end completo do site institucional, projetado para ser leve, elegante, futurista e direto ao ponto, com foco total em captação de clientes.
 
-## Tecnologias Utilizadas
+🚀 Visão do Projeto
 
-* **HTML5** — Estrutura semântica do site
-* **CSS3** — Estilização moderna e responsiva
-* **Google Fonts (Poppins)** — Tipografia limpa e profissional
+Criar um website corporativo que passa a sensação de:
 
----
+Autoridade técnica
 
-## Sobre a Code Shield
+Modernidade
 
-A **Code Shield** é uma startup que combina tecnologia e segurança para ajudar empresas a:
+Precisão
 
-* criar presença digital profissional;
-* fortalecer sua segurança básica de TI;
-* automatizar pequenos processos;
-* estruturar dados de forma eficiente;
-* proteger seus clientes e seu faturamento.
+Segurança
 
----
+Startup Tech de verdade
 
-## Estrutura do Projeto
+O objetivo central é gerar presença digital profissional, fortalecer a marca Code Shield e criar uma ponte direta para novos clientes.
 
-```
-/
-├── index.html        # Página principal
-├── /assets           # Futuro diretório para ícones, imagens e logos
-└── README.md         # Documentação do projeto
-```
+- Principais Funcionalidades
 
----
+- Layout responsivo e moderno
 
-## Pré-visualização (opcional)
+- Design inspirado em startups globais
 
-*Adicione aqui quando tiver screenshots do site*.
+- Componentes minimalistas e de alta performance
 
----
+- Identidade visual única (brasão + circuitos tech)
 
-## Objetivos do Projeto
+- Botão de contato direto via WhatsApp Business
 
-* Servir como **peça oficial do portfólio** do desenvolvedor.
-* Demonstrar domínio de HTML e CSS puro.
-* Testar técnicas de layout, grid e responsividade.
-* Construir sua identidade visual profissional.
+- Copywriting persuasivo para captação
 
----
+- Estrutura limpa, fácil de manter e expandir
 
-## Próximos Passos
+## Stack Tecnológica
+Tecnologia	Utilização
+HTML5	Estrutura semântica do site
+CSS3	Estilos responsivos e animações
+JavaScript (Vanilla)	Ações e interações simples
+GitHub Pages	Hospedagem estática
+Domínio próprio (.com)	Branding corporativo profissional
+# Arquitetura & Estrutura de Pastas
+CodeShield-website/
+│
+├── index.html
+│
+├── assets/
+│   └── img/
+│       └── logo-code-shield.png
+│
+└── README.md   (este arquivo)
 
-* [ ] Criar um diretório `/assets` para imagens e logos.
-* [ ] Otimizar responsividade em telas menores.
-* [ ] Adicionar animações leves (transitions + transforms).
-* [ ] Adicionar formulário de contato (ou integração com WhatsApp API).
-* [ ] Migrar futuramente para React/Vite ou Next.js.
 
----
+Simples. Objetivo. Escalável.
+Perfeito para evoluir para React, Vite, Next.js ou até um painel administrativo no futuro.
 
-## Autor
+## Identidade Visual
 
-**Lucas Alencar Xisto**
-Dev em evolução — Cybersecurity Enthusiast — Criador da Code Shield
+A identidade da Code Shield foi projetada para transmitir:
 
-GitHub:https://github.com/lucasalencarxisto-stack
-LinkedIn:https://linkedin.com/in/lucasalencar-dev
+Confiabilidade
 
----
+Precisão tecnológica
 
-## Licença
+Juventude + inovação
 
-Este projeto é livre para uso pessoal e educacional. Caso utilize como base, mantenha os créditos.
+Elegância minimalista
 
+## Paleta de Cores
+Cor	Função
+#020617	Fundo principal
+#38bdf8	Ações, destaques e elementos tech
+#ffffff	Tipografia e contraste
+#1e293b	Painéis e componentes
+Roadmap – Próximos Passos (v2.0+)
+
+“Um produto bem-feito é apenas o início. O roadmap é a ponte para a escala.”
+
+Fase 2 – Expansão da Presença
+
+Página institucional “Sobre Nós”
+
+Página de serviços detalhada
+
+Seção de depoimentos
+
+Landing pages para campanhas
+
+Fase 3 – Enterprise Ready
+
+Formulário inteligente de orçamento
+
+Integração com CRM
+
+Painel administrativo para leads
+
+Fase 4 – IA & Automação
+
+Chatbot CodeShield AI no site
+
+Analisador automático de riscos
+
+Sistema de suporte inteligente para clientes
+
+## Proposta de Valor
+
+A Code Shield entrega:
+
+Soluções de TI sob medida
+
+Segurança proativa
+
+Manutenção contínua
+
+Escalabilidade
+
+Atendimento humanizado
+
+Estratégia orientada a resultados
+
+Produto vende uma vez. Manutenção vende todo mês.
+E é aqui que uma startup vira empresa.
+
+# Missão
+
+Proteger, fortalecer e acelerar negócios através da tecnologia.
+
+# Contribuições
+
+Por enquanto, o projeto é de desenvolvimento fechado.
+Mas sugestões, feedbacks e melhorias são sempre bem-vindos via Issues.
+
+### Autor
+
+Lucas Alencar Xisto
+Founder & Full-Stack Engineer – Code Shield
+Desenvolvedor, Cybersecurity Enthusiast, Visionário e Criador do DeepBruce-AI
+
+email: lucas.alencar@code-shield.com
+
+site: https://code-shield.com
+
+Github: https://github.com/lucasalencarxisto-stack
+
+### Licença
+
+Este repositório está licenciado sob a MIT License.
+Use, aprenda, expanda — com os devidos créditos.
+
+>>> Se esse projeto te inspirou…
+
+Considere deixar uma estrela * no repositório.
+Startups nascem pequenas, mas crescem carregadas por boas ideias — e boas comunidades.
