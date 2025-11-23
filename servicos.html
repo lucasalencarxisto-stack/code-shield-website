@@ -24,19 +24,20 @@
       }
 
       section:target {
-        outline: 2px solid #38bdf8;
+        outline: 2px solid var(--accent);
       }
 
       :root {
-        --bg: #050816;
-        --bg-card: #0b1120;
-        --accent: #38bdf8;
-        --accent-strong: #0ea5e9;
-        --text: #e5e7eb;
+        /* PALETA CODE SHIELD */
+        --bg: #000000;
+        --bg-card: #050816;
+        --accent: #7cff00;          /* verde fluorescente */
+        --accent-strong: #b4ff3b;   /* verde mais claro/brilho */
+        --text: #ffffff;
         --muted: #9ca3af;
-        --danger: #f97316;
+        --danger: #16a34a;
         --radius-xl: 18px;
-        --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+        --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
       }
 
       * {
@@ -49,9 +50,9 @@
         font-family: "Poppins", sans-serif;
         background: radial-gradient(
           circle at top,
-          #0f172a,
+          #022c22,
           #020617 45%,
-          #000 100%
+          #000000 100%
         );
         color: var(--text);
         min-height: 100vh;
@@ -69,6 +70,7 @@
         padding: 0 1.5rem;
       }
 
+      /* HEADER */
       header {
         position: sticky;
         top: 0;
@@ -76,42 +78,49 @@
         backdrop-filter: blur(16px);
         background: linear-gradient(
           to bottom,
-          rgba(2, 6, 23, 0.95),
-          rgba(2, 6, 32, 0.7),
+          rgba(0, 0, 0, 0.95),
+          rgba(0, 0, 0, 0.75),
           transparent
         );
-        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+         padding: 0;
+      }
+
+      .logo-link {
+        display: inline-block;
+        cursor: pointer;
+        transition: transform 0.18s ease-out;
+      }
+
+      .logo-link:hover {
+        transform: scale(1.02);
       }
 
       .hero {
         display: flex;
         align-items: center;
-        gap: 1.5rem;
-        padding: 1.5rem 8vw;
+        justify-content: center;
+        width: 100%;
+        padding: 0.4rem 1rem 0.8rem;
+        margin: 0;
       }
 
-      .logo-hero {
-        width: 160px;
+      .logo-text {
+        max-width: 340px;
+        width: 100%;
         height: auto;
         display: block;
-        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
-      }
-
-      .hero-text h1 {
-        font-size: 2.1rem;
-        letter-spacing: 0.08em;
-      }
-
-      .hero-text p {
-        margin-top: 0.4rem;
-        font-size: 0.95rem;
-        color: #9ca3af;
+        margin: 0 auto;
+        filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
       }
 
       @media (max-width: 768px) {
         .hero {
-          flex-direction: column;
-          text-align: center;
+          padding: 0.8rem 1rem;
         }
       }
 
@@ -146,12 +155,14 @@
         left: -260px;
         height: 100%;
         width: 260px;
-        background: rgba(10, 15, 30, 0.95);
+        background: rgba(3, 7, 18, 0.98);
         backdrop-filter: blur(12px);
-        border-right: 1px solid rgba(148, 163, 184, 0.25);
+        border-right: 1px solid rgba(148, 163, 184, 0.35);
         padding: 2rem 1.2rem;
         z-index: 1999;
         transition: 0.35s ease;
+        max-height: 100vh;
+        overflow-y: auto;
       }
 
       .side-menu.open {
@@ -192,7 +203,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.45);
+        background: rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(3px);
         opacity: 0;
         pointer-events: none;
@@ -272,11 +283,11 @@
       .card {
         background: radial-gradient(
           circle at top,
-          rgba(15, 23, 42, 0.9),
-          rgba(15, 23, 42, 0.85)
+          rgba(5, 8, 22, 0.95),
+          rgba(3, 7, 18, 0.95)
         );
         border-radius: var(--radius-xl);
-        border: 1px solid rgba(148, 163, 184, 0.25);
+        border: 1px solid rgba(148, 163, 184, 0.35);
         padding: 1rem;
         box-shadow: var(--shadow-soft);
         display: flex;
@@ -316,10 +327,11 @@
       footer {
         margin-top: 3rem;
         padding: 1.5rem 0 2rem;
-        border-top: 1px solid rgba(148, 163, 184, 0.3);
+        border-top: 1px solid rgba(148, 163, 184, 0.35);
         font-size: 0.8rem;
         color: var(--muted);
         text-align: center;
+        background: #000000;
       }
 
       footer span {
@@ -335,30 +347,26 @@
   </head>
 
   <body>
-    <!-- HEADER + LOGO -->
-    <header>
-      <div class="hero">
-        <img
-          src="assets/img/logo-code-shield.png"
-          alt="Logo Code Shield"
-          width="200"
-          class="logo-hero"
-        />
-        <div class="hero-text">
-          <h1>Code Shield</h1>
-          <p>Portfólio de Serviços em TI &amp; Segurança</p>
-        </div>
-      </div>
-    </header>
-
-    <!-- BOTÃO HAMBURGER -->
+    <!-- HEADER + LOGO FULL CENTRALIZADO -->
+   <header>
+  <div class="hero">
+    <a href="index.html" class="logo-link">
+      <img
+        src="assets/img/logo-code-shield.png"
+        alt="Logo Code Shield"
+        class="logo-text"
+      />
+    </a>
+  </div>
+</header>
+   <!-- BOTÃO HAMBURGER -->
     <button class="hamburger" id="hamburgerBtn">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
-    <!-- MENU LATERAL (AGORA SÓ ÂNCORAS INTERNAS) -->
+    <!-- MENU LATERAL (ÂNCORAS INTERNAS) -->
     <nav id="sideMenu" class="side-menu">
       <div class="side-menu-header">
         <h3>MENU</h3>

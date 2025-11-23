@@ -12,8 +12,29 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
       rel="stylesheet"
     />
+    
+  <style>
+    .hero-card-video {
+      padding: 0;
+      background: radial-gradient(circle at top, #020617, #000000 70%);
+      border-radius: 24px;
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      box-shadow: var(--shadow-soft);
+      overflow: hidden;
+      }
 
-    <style>
+    .hero-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      }
+
+    .hero-card-video {
+      box-shadow:
+        0 0 32px rgba(124, 255, 0, 0.25),
+        var(--shadow-soft);
+      }
+      
       html {
         scroll-behavior: smooth;
       }
@@ -339,17 +360,16 @@
         color: #d1d5db;
       }
 
-      /* Todas as “cores de valor” puxadas pro espectro do verde */
       .hero-matrix .val-blue {
-        color: #a3e635; /* verde-limão */
+        color: #a3e635; 
       }
 
       .hero-matrix .val-orange {
-        color: #bbf7d0; /* verde bem claro/pastel */
+        color: #bbf7d0; 
       }
 
       .hero-matrix .val-green {
-        color: #4ade80; /* verde sucesso */
+        color: #4ade80; 
       }
 
       .hero-footer-note {
@@ -444,6 +464,8 @@
           grid-template-columns: 1fr;
         }
       }
+
+      
     </style>
   </head>
 
@@ -522,43 +544,18 @@
         </div>
 
         <div class="hero-right">
-          <div class="hero-card">
-            <div class="hero-card-header">
-              <div class="hero-chip">Shield Monitor v1.0</div>
-              <div class="hero-status">
-                <span class="dot"></span>
-                ambiente monitorado
-              </div>
-            </div>
-            <div class="hero-matrix">
-              <span class="key">client_name</span>:
-              <span class="val-blue">"Empresa Local São Vicente-SP"</span><br />
-              <span class="key">stack</span>:
-              <span class="val-orange">
-                ["Web Security", "Infra básica", "Web dev"]
-              </span
-              ><br />
-              <span class="key">risco_inicial</span>:
-              <span class="val-orange">"ALTO"</span><br />
-              <span class="key">risco_atual</span>:
-              <span class="val-green">"BAIXO"</span><br />
-              <span class="key">superfície_de_ataque</span>:
-              <span class="val-blue">"Reduzida em 63%"</span><br />
-              <span class="key">uptime_site</span>:
-              <span class="val-green">"99.9%"</span><br />
-              <span class="key">status</span>:
-              <span class="val-green"
-                >"Operação segura &amp; em crescimento"</span
-              ><br />
-            </div>
-            <div class="hero-footer-note">
-              <div class="hero-tagline">
-                "Quem cuida do seu código, protege também o seu caixa."
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  <div class="hero-card hero-card-video">
+    <video
+      src="assets/video/ciberseguranca-blue-team.mp4"
+      autoplay
+      loop
+      muted
+      playsinline
+      class="hero-video"
+    ></video>
+  </div>
+</div>
+   </section>
     </main>
 
     <footer id="contato" class="footer">
