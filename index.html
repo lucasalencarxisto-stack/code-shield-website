@@ -93,36 +93,47 @@
 
        /* LOGO CENTRALIZADO */
     .logo-text {
-      max-width: 420px;      
+      max-width: 420px;   
       width: 100%;
-      transform: scaleX(1.12); 
       height: auto;
       display: block;
       margin: 0 auto;
+      transform: scaleX(1.05); 
       filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
       }
 
 
       @media (max-width: 768px) {
-        .hero {
-          padding: 0.6rem 1rem 0.4rem;
+        
+        header {
+          padding-top: 8px;
         }
+        
+        .hero {
+          padding: 0.4rem 1rem 0.8rem;
+        }
+
+      .logo-text {
+        max-width: 340px;
+        transform: scaleX(1.0);
+        margin-top: 12px;
+       }
       }
 
       /* === MENU HAMBURGER === */
-      .hamburger {
-        position: fixed;
-        top: 18px;
-        left: auto;
-        width: 42px;
-        height: 36px;
-        background: transparent;
-        border: none;
-        cursor: pointer;
-        z-index: 2000;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+    .hamburger {
+      position: fixed;
+      top: 12px;
+      left: 12px;         
+      width: 42px;
+      height: 36px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       }
 
       .hamburger span {
