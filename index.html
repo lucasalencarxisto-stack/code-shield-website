@@ -19,15 +19,16 @@
       }
 
       :root {
-        --bg: #050816;
-        --bg-card: #0b1120;
-        --accent: #38bdf8;
-        --accent-strong: #0ea5e9;
-        --text: #e5e7eb;
+        /* PALETA CODE SHIELD */
+        --bg: #000000;
+        --bg-card: #050816;
+        --accent: #7cff00;          /* verde fluorescente */
+        --accent-strong: #b4ff3b;   /* verde mais claro para brilho */
+        --text: #ffffff;
         --muted: #9ca3af;
-        --danger: #f97316;
+        --danger: #16a34a;          /* usamos como segundo verde no gradiente */
         --radius-xl: 18px;
-        --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.45);
+        --shadow-soft: 0 18px 45px rgba(0, 0, 0, 0.65);
       }
 
       * {
@@ -40,9 +41,9 @@
         font-family: "Poppins", sans-serif;
         background: radial-gradient(
           circle at top,
-          #0f172a,
+          #022c22,
           #020617 45%,
-          #000 100%
+          #000000 100%
         );
         color: var(--text);
         min-height: 100vh;
@@ -60,7 +61,7 @@
         padding: 0 1.5rem;
       }
 
-      /* HEADER / HERO TOPO */
+      /* HEADER */
       header {
         position: sticky;
         top: 0;
@@ -69,47 +70,34 @@
         padding-bottom: 0;
         background: linear-gradient(
           to bottom,
-          rgba(2, 6, 23, 0.95),
-          rgba(2, 6, 32, 0.7),
+          rgba(0, 0, 0, 0.95),
+          rgba(0, 0, 0, 0.75),
           transparent
         );
-        border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+        border-bottom: 1px solid rgba(148, 163, 184, 0.25);
       }
 
       .hero {
         display: flex;
         align-items: center;
-        justify-content: space-between;
-        gap: 2rem;
-        padding: 1rem 6vw 0.6rem;
+        justify-content: center;
+        padding: 1rem 1.5rem 0.8rem;
         min-height: 110px;
       }
 
-      .logo-hero {
-        width: 140px;
+      /* LOGO CENTRALIZADO */
+      .logo-text {
+        max-width: 360px;
+        width: 100%;
         height: auto;
         display: block;
-        filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
-      }
-
-      .logo-text {
-        height: 420px;
-        width: auto;
-        display: block;
         margin: 0 auto;
-        filter: drop-shadow(0 6px 18px rgba(0,0,0,0.45));
-      }
-
-      .hero-text {
-        flex: 1;
-        display: flex;
-        justify-content: center;
+        filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
       }
 
       @media (max-width: 768px) {
         .hero {
-          flex-direction: column;
-          text-align: center;
+          padding: 0.8rem 1rem;
         }
       }
 
@@ -144,9 +132,9 @@
         left: -260px;
         height: 100%;
         width: 260px;
-        background: rgba(10, 15, 30, 0.95);
+        background: rgba(3, 7, 18, 0.98);
         backdrop-filter: blur(12px);
-        border-right: 1px solid rgba(148, 163, 184, 0.25);
+        border-right: 1px solid rgba(148, 163, 184, 0.35);
         padding: 2rem 1.2rem;
         z-index: 1999;
         transition: 0.35s ease;
@@ -192,7 +180,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 0.45);
+        background: rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(3px);
         opacity: 0;
         pointer-events: none;
@@ -225,13 +213,13 @@
         grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
         gap: 2.5rem;
         align-items: center;
-        padding-top: 0.8rem;
+        padding-top: 1.5rem;
       }
 
       @media (max-width: 880px) {
         .hero-main {
           grid-template-columns: minmax(0, 1fr);
-          padding-top: 2rem;
+          padding-top: 2.5rem;
         }
       }
 
@@ -248,6 +236,7 @@
         font-weight: 700;
         line-height: 1.2;
         margin-bottom: 1rem;
+        color: #ffffff;
       }
 
       .hero-title span {
@@ -273,13 +262,13 @@
       }
 
       .hero-card {
-        background: radial-gradient(circle at top, #0f172a, #020617 70%);
+        background: radial-gradient(circle at top, #020617, #000000 70%);
         border-radius: 24px;
         box-shadow: var(--shadow-soft);
         padding: 1.5rem;
         position: relative;
         overflow: hidden;
-        border: 1px solid rgba(148, 163, 184, 0.35);
+        border: 1px solid rgba(148, 163, 184, 0.45);
       }
 
       .hero-card-header {
@@ -293,9 +282,9 @@
         font-size: 0.7rem;
         padding: 0.25rem 0.7rem;
         border-radius: 999px;
-        border: 1px solid rgba(56, 189, 248, 0.6);
-        color: var(--accent);
-        background: rgba(15, 23, 42, 0.9);
+        border: 1px solid rgba(124, 255, 0, 0.7);
+        color: var(--accent-strong);
+        background: rgba(0, 0, 0, 0.9);
         text-transform: uppercase;
         letter-spacing: 0.16em;
       }
@@ -312,8 +301,8 @@
         width: 8px;
         height: 8px;
         border-radius: 999px;
-        background: #22c55e;
-        box-shadow: 0 0 12px rgba(34, 197, 94, 0.9);
+        background: var(--accent);
+        box-shadow: 0 0 14px rgba(124, 255, 0, 1);
       }
 
       .hero-matrix {
@@ -321,26 +310,27 @@
           "Courier New", monospace;
         font-size: 0.78rem;
         line-height: 1.55;
-        color: #9ca3af;
+        color: #e5e7eb;
         max-height: 180px;
         overflow: hidden;
         position: relative;
       }
 
       .hero-matrix .key {
-        color: #e5e7eb;
+        color: #d1d5db;
       }
 
+      /* Todas as “cores de valor” puxadas pro espectro do verde */
       .hero-matrix .val-blue {
-        color: #3b82f6;
+        color: #a3e635; /* verde-limão */
       }
 
       .hero-matrix .val-orange {
-        color: #fb923c;
+        color: #bbf7d0; /* verde bem claro/pastel */
       }
 
       .hero-matrix .val-green {
-        color: #4ade80;
+        color: #4ade80; /* verde sucesso */
       }
 
       .hero-footer-note {
@@ -351,7 +341,7 @@
 
       .hero-tagline {
         border-radius: 999px;
-        border: 1px solid rgba(148, 163, 184, 0.35);
+        border: 1px solid rgba(148, 163, 184, 0.5);
         padding: 0.4rem 0.7rem;
         font-size: 0.7rem;
         color: var(--muted);
@@ -368,10 +358,10 @@
           var(--accent-strong),
           var(--danger)
         );
-        color: #0b1120;
+        color: #020617;
         font-weight: 600;
         font-size: 0.9rem;
-        box-shadow: 0 12px 30px rgba(56, 189, 248, 0.45);
+        box-shadow: 0 12px 30px rgba(124, 255, 0, 0.45);
         display: inline-flex;
         align-items: center;
         gap: 0.4rem;
@@ -381,84 +371,83 @@
         font-size: 1rem;
       }
 
+      /* FOOTER */
       .footer {
-  background: #0b1120;
-  padding: 60px 0;
-  color: #e5e7eb;
-  margin-top: 80px;
-}
+        background: #000000;
+        padding: 60px 0;
+        color: #e5e7eb;
+        margin-top: 80px;
+        border-top: 1px solid rgba(148, 163, 184, 0.35);
+      }
 
-.footer-title {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
+      .footer-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        font-weight: 700;
+        color: #ffffff;
+      }
 
-.footer-sub {
-  color: #9ca3af;
-  margin-bottom: 40px;
-}
+      .footer-sub {
+        color: #9ca3af;
+        margin-bottom: 40px;
+      }
 
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+      }
 
-.footer-col h3 {
-  margin-bottom: 12px;
-  color: #38bdf8;
-}
+      .footer-col h3 {
+        margin-bottom: 12px;
+        color: var(--accent-strong);
+      }
 
-.footer-col ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
+      .footer-col ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
 
-.footer-col li {
-  margin-bottom: 8px;
-}
+      .footer-col li {
+        margin-bottom: 8px;
+      }
 
-.footer-copy {
-  margin-top: 40px;
-  text-align: center;
-  font-size: 0.9rem;
-  color: #64748b;
-}
+      .footer-copy {
+        margin-top: 40px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #64748b;
+      }
 
+      @media (max-width: 768px) {
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
     </style>
   </head>
 
   <body>
-    <!-- TOPO COM LOGO -->
+    <!-- HEADER COM LOGO CENTRALIZADO -->
     <header>
-  <div class="hero">
+      <div class="hero">
+        <img
+          src="assets/img/logo-code-shield.png"
+          alt="Logo Code Shield"
+          class="logo-text"
+        />
+      </div>
 
-    <img
-      src="assets/img/logo-code-shield.png"
-      alt="Logo Code Shield"
-      width="200"
-      class="logo-hero"
-    />
+      <!-- BOTÃO HAMBURGER -->
+      <button class="hamburger" id="hamburgerBtn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
 
-    <div class="hero-text">
-      <img 
-        src="assets/img/logo-code-shield-full.png"
-        alt="Code Shield Logo Text"
-        class="logo-text"
-      />
-    </div>
-  
-  </div>
-   <!-- BOTÃO HAMBURGER -->
-  <button class="hamburger" id="hamburgerBtn">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-</header>
-   <!-- MENU LATERAL -->
+    <!-- MENU LATERAL -->
     <nav id="sideMenu" class="side-menu">
       <div class="side-menu-header">
         <h3>MENU</h3>
@@ -484,7 +473,7 @@
 
     <div id="menuBackdrop" class="backdrop"></div>
 
-    <!-- HERO PRINCIPAL (SALA DE ESTAR) -->
+    <!-- HERO PRINCIPAL -->
     <main>
       <section class="container hero-main">
         <div>
@@ -554,33 +543,45 @@
     </main>
 
     <footer id="contato" class="footer">
-  <div class="container">
-    <h2 class="footer-title">Contato</h2>
+      <div class="container">
+        <h2 class="footer-title">Contato</h2>
 
-    <p class="footer-sub">Estamos prontos para atender você com segurança, clareza e eficiência.</p>
+        <p class="footer-sub">
+          Estamos prontos para atender você com segurança, clareza e eficiência.
+        </p>
 
-    <div class="footer-grid">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>📧 E-mails</h3>
+            <ul>
+              <li>
+                <strong>financeiro@code-shield.com</strong> — despesas e
+                orçamentos
+              </li>
+              <li>
+                <strong>security@code-shield.com</strong> — assuntos de
+                segurança
+              </li>
+              <li>
+                <strong>lucas.alencar@code-shield.com</strong> — contato pessoal
+              </li>
+              <li>
+                <strong>suporte@code-shield.com</strong> — suporte técnico
+              </li>
+            </ul>
+          </div>
 
-      <div class="footer-col">
-        <h3>📧 E-mails</h3>
-        <ul>
-          <li><strong>financeiro@code-shield.com</strong> — despesas e orçamentos</li>
-          <li><strong>security@code-shield.com</strong> — assuntos de segurança</li>
-          <li><strong>lucas.alencar@code-shield.com</strong> — contato pessoal</li>
-          <li><strong>suporte@code-shield.com</strong> — suporte técnico</li>
-        </ul>
+          <div class="footer-col">
+            <h3>📱 Telefone</h3>
+            <p><strong>+55 (13) 99710-0889</strong></p>
+          </div>
+        </div>
+
+        <p class="footer-copy">
+          © 2025 Code Shield — Segurança & Soluções em TI
+        </p>
       </div>
-
-      <div class="footer-col">
-        <h3>📱 Telefone</h3>
-        <p><strong>+55 (13) 99710-0889</strong></p>
-      </div>
-
-    </div>
-
-    <p class="footer-copy">© 2025 Code Shield — Segurança & Soluções em TI</p>
-  </div>
-</footer>
+    </footer>
 
     <script>
       const hamburger = document.getElementById("hamburgerBtn");
