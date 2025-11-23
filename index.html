@@ -63,38 +63,43 @@
 
       /* HEADER */
     header {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: auto;
-      padding: 8px 0; 
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      backdrop-filter: blur(16px);
       background: linear-gradient(
-        to bottom,
+       to bottom,
         rgba(0, 0, 0, 0.95),
         rgba(0, 0, 0, 0.75),
         transparent
       );
-      border-bottom: 1px solid rgba(148,163,184,0.25);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 110px;    
+      padding: 0;      
       }
 
-    .hero {
+     .hero {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0;         
+      width: 100%;
+      padding: 0;
       margin: 0;
-      min-height: unset;  
-      height: auto;
+      min-height: 0;
       }
 
-      /* LOGO CENTRALIZADO */
+       /* LOGO CENTRALIZADO */
     .logo-text {
-      width: 420px;       
-      max-width: 90%;     
+      max-width: 430px;      
+      width: 100%;
+      transform: scaleX(1.12); 
       height: auto;
       display: block;
       margin: 0 auto;
-      filter: drop-shadow(0 8px 24px rgba(0,0,0,0.8));
+      filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.8));
       }
 
 
