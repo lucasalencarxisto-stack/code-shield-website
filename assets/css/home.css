@@ -1,0 +1,7 @@
+/* Home */
+.hero-main { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2.5rem; align-items: center; padding-block: 4rem 2rem; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: .8rem; align-items: center; }
+.hero-right { min-width: 0; }
+.hero-card-video { padding: 0; background: var(--bg-card); border-radius: 24px; border: 1px solid rgba(124,255,0,.3); box-shadow: 0 0 32px rgba(124,255,0,.15), var(--shadow-soft); overflow: hidden; }
+.hero-video { display: block; width: 100%; height: auto; }
+@media (max-width: 880px) { .hero-main { grid-template-columns: minmax(0,1fr); padding-top: 2.5rem; } }

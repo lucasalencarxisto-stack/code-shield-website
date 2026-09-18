@@ -77,7 +77,7 @@ Elegância minimalista
 ## Paleta de Cores
 Cor	Função
 #020617	Fundo principal
-#38bdf8	Ações, destaques e elementos tech
+#7cff00	Ações, destaques e elementos tech
 #ffffff	Tipografia e contraste
 #1e293b	Painéis e componentes
 Roadmap – Próximos Passos (v2.0+)
@@ -88,7 +88,7 @@ Fase 2 – Expansão da Presença
 
 Página institucional “Sobre Nós”
 
-Página de serviços detalhada
+Página de serviços detalhada (implementada em `servicos.html`)
 
 Seção de depoimentos
 
@@ -159,3 +159,16 @@ Use, aprenda, expanda — com os devidos créditos.
 
 Considere deixar uma estrela * no repositório.
 Startups nascem pequenas, mas crescem carregadas por boas ideias — e boas comunidades.
+
+## Local development
+
+Run `python -m http.server 8000` and open `http://localhost:8000`.
+
+- `index.html`: home and contact information.
+- `servicos.html`: service details.
+- `assets/css/global.css`: shared layout, navigation, colors and accessibility.
+- `assets/css/home.css`: home layout and video.
+- `assets/css/services.css`: service sections and cards.
+- `assets/js/main.js`: shared menu and copyright year.
+
+No build step or package installation is required.
