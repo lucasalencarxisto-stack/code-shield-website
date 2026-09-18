@@ -1,157 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Code Shield | Segurança & Soluções em TI</title>
 
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Code Shield | Segurança & Soluções em TI</title>
+
+  <!-- Fonts -->
+  <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+
   <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/home.css" />
-  </head>
+  <link rel="stylesheet" href="assets/css/home.css" />
 
-  <body>
-    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
-    <!-- HEADER COM LOGO CENTRALIZADO -->
-    <header>
-      <div class="hero">
-        <a href="index.html" class="logo-link"><img
-          src="assets/img/logo-code-shield.png"
-          alt="Logo Code Shield"
-          class="logo-text"
-        /></a>
-      </div>
+</head>
 
-      <!-- BOTÃO HAMBURGER -->
+<body>
+  <!-- HEADER COM LOGO CENTRALIZADO -->
+  <header>
+    <div class="hero">
+      <img src="assets/img/logo-code-shield.png" alt="Logo Code Shield" class="logo-text" />
+    </div>
 
-    </header>
-      <button class="hamburger" id="hamburgerBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="sideMenu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <!-- BOTÃO HAMBURGER -->
+    <button class="hamburger" id="hamburgerBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
 
-    <!-- MENU LATERAL -->
-    <nav id="sideMenu" class="side-menu" aria-label="Menu principal" inert>
-      <div class="side-menu-header">
-        <h3>MENU</h3>
-      </div>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="servicos.html#services">Serviços</a></li>
-        <li><a href="servicos.html#cyber">Cibersegurança</a></li>
-        <li><a href="servicos.html#websites">Websites</a></li>
-        <li><a href="servicos.html#software">Software sob medida</a></li>
-        <li><a href="servicos.html#apps">Aplicativos</a></li>
-        <li><a href="servicos.html#db">Análise de Dados &amp; Bancos</a></li>
-        <li><a href="servicos.html#ia">ML / IA</a></li>
-        <li><a href="servicos.html#chatbots">Chatbots personalizados</a></li>
-        <li>
-          <a href="servicos.html#hosting">Hospedagem / Cloudflare / ASP.NET</a>
-        </li>
-        <li><a href="servicos.html#auditorias">Auditorias</a></li>
-        <li><a href="servicos.html#manutencao">Manutenção Preventiva</a></li>
-        <li><a href="#contato">Contato</a></li>
-      </ul>
-    </nav>
+  <!-- MENU LATERAL -->
+  <nav id="sideMenu" class="side-menu">
+    <div class="side-menu-header">
+      <h3>MENU</h3>
+    </div>
+    <ul>
+      <li><a href="servicos.html#services">Serviços</a></li>
+      <li><a href="servicos.html#cyber">Cibersegurança</a></li>
+      <li><a href="servicos.html#websites">Websites</a></li>
+      <li><a href="servicos.html#software">Software sob medida</a></li>
+      <li><a href="servicos.html#apps">Aplicativos</a></li>
+      <li><a href="servicos.html#db">Análise de Dados &amp; Bancos</a></li>
+      <li><a href="servicos.html#ia">ML / IA</a></li>
+      <li><a href="servicos.html#chatbots">Chatbots personalizados</a></li>
+      <li>
+        <a href="servicos.html#hosting">Hospedagem / Cloudflare / ASP.NET</a>
+      </li>
+      <li><a href="servicos.html#marketing">Marketing Digital</a></li>
+      <li><a href="servicos.html#auditorias">Auditorias</a></li>
+      <li><a href="servicos.html#manutencao">Manutenção Preventiva</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
 
-    <div id="menuBackdrop" class="backdrop" aria-hidden="true"></div>
+  <div id="menuBackdrop" class="backdrop"></div>
 
-    <!-- HERO PRINCIPAL -->
-    <main id="conteudo" tabindex="-1">
-      <section class="container hero-main">
-        <div>
-          <div class="hero-kicker">Startup de tecnologia &amp; segurança</div>
-          <h1 class="hero-title">
-            Blindando o futuro digital<br />
-            com <span>código, segurança e estratégia</span>.
-          </h1>
-          <p class="hero-subtitle">
-            A Code Shield ajuda pequenas e médias empresas a proteger seus
-            dados, profissionalizar a presença digital e transformar tecnologia
-            em lucro — com sites modernos, automação sob medida e práticas de
-            cibersegurança Blue Team.
-          </p>
-
-          <div class="hero-actions">
-            <a
-              href="https://wa.me/5513997100889?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Code%20Shield%20e%20quero%20um%20diagn%C3%B3stico%20gr%C3%A1tis."
-              class="btn-primary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Quero um diagnóstico grátis
-              <span>⚡</span>
-            </a>
-            <a href="servicos.html" class="btn-secondary">Conheça os serviços</a>
-          </div>
-        </div>
-
-        <div class="hero-right">
-  <div class="hero-card hero-card-video">
-    <video
-      src="assets/video/ciberseguranca-blue-team.mp4"
-      controls
-      preload="metadata"
-      aria-label="Apresentação de cibersegurança Code Shield"
-      loop
-      muted
-      playsinline
-      class="hero-video"
-    ></video>
-  </div>
-</div>
-   </section>
-    </main>
-
-    <footer id="contato" class="footer">
-      <div class="container">
-        <h2 class="footer-title">Contato</h2>
-
-        <p class="footer-sub">
-          Estamos prontos para atender você com segurança, clareza e eficiência.
+  <!-- HERO PRINCIPAL -->
+  <main>
+    <section class="container hero-main">
+      <div>
+        <div class="hero-kicker">Startup de tecnologia &amp; segurança</div>
+        <h1 class="hero-title">
+          Blindando o futuro digital<br />
+          com <span>código, segurança e estratégia</span>.
+        </h1>
+        <p class="hero-subtitle">
+          A Code Shield ajuda pequenas e médias empresas a proteger seus
+          dados, profissionalizar a presença digital e transformar tecnologia
+          em lucro — com sites modernos, automação sob medida e práticas de
+          cibersegurança Blue Team.
         </p>
 
-        <div class="footer-grid">
-          <div class="footer-col">
-            <h3>📧 E-mails</h3>
-            <ul>
-              <li>
-                <a href="mailto:financeiro@code-shield.com">financeiro@code-shield.com</a> — despesas e
-                orçamentos
-              </li>
-              <li>
-                <a href="mailto:security@code-shield.com">security@code-shield.com</a> — assuntos de
-                segurança
-              </li>
-              <li>
-                <a href="mailto:lucas.alencar@code-shield.com">lucas.alencar@code-shield.com</a> — contato pessoal
-              </li>
-              <li>
-                <a href="mailto:suporte@code-shield.com">suporte@code-shield.com</a> — suporte técnico
-              </li>
-            </ul>
-          </div>
+        <div class="hero-actions">
+          <a href="https://wa.me/5513997100889?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Code%20Shield%20e%20quero%20um%20diagn%C3%B3stico%20gr%C3%A1tis."
+            class="btn-primary" target="_blank" rel="noopener noreferrer">
+            Quero um diagnóstico grátis
+            <span>⚡</span>
+          </a>
+        </div>
+      </div>
 
-          <div class="footer-col">
-            <h3>📱 Telefone</h3>
-            <p><a href="tel:+5513997100889">+55 (13) 99710-0889</a></p>
-          </div>
+      <div class="hero-right">
+        <div class="hero-card hero-card-video">
+          <video src="assets/video/ciberseguranca-blue-team.mp4" autoplay loop muted playsinline
+            class="hero-video"></video>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contato" class="footer">
+    <div class="container">
+      <h2 class="footer-title">Contato</h2>
+
+      <p class="footer-sub">
+        Estamos prontos para atender você com segurança, clareza e eficiência.
+      </p>
+
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>📧 E-mails</h3>
+          <ul>
+            <li>
+              <strong>financeiro@code-shield.com</strong> — despesas e
+              orçamentos
+            </li>
+            <li>
+              <strong>security@code-shield.com</strong> — assuntos de
+              segurança
+            </li>
+            <li>
+              <strong>lucas.alencar@code-shield.com</strong> — contato pessoal
+            </li>
+            <li>
+              <strong>suporte@code-shield.com</strong> — suporte técnico
+            </li>
+          </ul>
         </div>
 
-        <p class="footer-copy">
-          © <span data-year>2026</span> Code Shield — Segurança & Soluções em TI
-        </p>
+        <div class="footer-col">
+          <h3>📱 Telefone</h3>
+          <p><strong>+55 (13) 99710-0889</strong></p>
+        </div>
       </div>
-    </footer>
 
-    <script src="assets/js/main.js" defer></script>
-  </body>
+      <p class="footer-copy">
+        © 2025 Code Shield — Segurança & Soluções em TI
+      </p>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js">
+  </script>
+</body>
+
 </html>
