@@ -1,0 +1,11 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+const whatsapp = 'https://wa.me/5513996887824?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Code%20Shield%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento.';
+---
+<MainLayout title="Contato e Orçamentos | Code Shield" description="Entre em contato com a Code Shield para conversar sobre seu próximo site, aplicativo, QA ou projeto digital.">
+  <section class="page-hero"><div class="wrap"><div class="breadcrumb"><a href="/">Início</a><span>/</span><span>Contato</span></div><span class="eyebrow"><span class="dot"></span> VAMOS CONVERSAR</span><h1>Uma boa solução começa com <span class="gradient-text">uma boa conversa.</span></h1><p>Conte sua ideia, o tipo de serviço e o que espera alcançar. Vamos avaliar as possibilidades e os próximos passos, sem compromisso de contratação.</p></div></section>
+  <section class="section wrap"><div class="contact-options">
+    <div class="contact-option"><span class="section-label">MENSAGEM DIRETA</span><h2>WhatsApp comercial</h2><p>O caminho mais rápido para tirar dúvidas e solicitar orçamento.</p><a class="btn btn-primary" href={whatsapp} target="_blank" rel="noopener noreferrer">Chamar no WhatsApp <span aria-hidden="true">↗</span></a></div>
+    <div class="contact-option"><span class="section-label">CONTATO PROFISSIONAL</span><h2>E-mail da Code Shield</h2><p>Prefere enviar briefing, arquivos ou uma descrição detalhada?</p><a href="mailto:lucas.alencar@code-shield.com?subject=Or%C3%A7amento%20Code%20Shield">lucas.alencar@code-shield.com</a></div>
+  </div></section>
+</MainLayout>

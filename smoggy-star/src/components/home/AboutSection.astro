@@ -1,0 +1,29 @@
+<section class="section institutional-section" aria-labelledby="about-title">
+  <div class="wrap institutional-about institutional-reveal">
+    <div class="section-heading">
+      <span class="section-label">01 / QUEM SOMOS</span>
+      <h2 class="section-title" id="about-title">Não nascemos para seguir o futuro.<br /><span class="gradient-text">Nascemos para construí-lo.</span></h2>
+    </div>
+    <div class="institutional-story">
+      <p>A Code Shield nasceu em 2025 com uma proposta: transformar tecnologia em soluções práticas, acessíveis e seguras.</p>
+      <p>Fundada por Lucas Alencar, a startup surgiu da combinação entre desenvolvimento de software, criatividade e interesse por cibersegurança.</p>
+      <p>O que começou como uma iniciativa de soluções em TI evoluiu para um estúdio de engenharia digital, explorando desenvolvimento web, aplicações, inteligência artificial e qualidade de software.</p>
+      <p>Nossa filosofia é simples: uma boa tecnologia não precisa apenas impressionar. <strong>Precisa funcionar, resolver problemas e gerar valor.</strong></p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Content remains visible without JavaScript or when reduced motion is requested.
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .08 });
+    document.querySelectorAll('.institutional-reveal').forEach((element) => observer.observe(element));
+  }
+</script>

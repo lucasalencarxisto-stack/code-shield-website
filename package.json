@@ -1,0 +1,11 @@
+{
+  "name": "code-shield-website",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "npm --prefix smoggy-star run dev",
+    "build": "npm --prefix smoggy-star run build",
+    "preview": "npm --prefix smoggy-star run preview",
+    "astro": "npm --prefix smoggy-star run astro"
+  }
+}

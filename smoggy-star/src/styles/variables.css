@@ -1,0 +1,25 @@
+:root {
+  color-scheme: dark;
+  --black: #000000;
+  --panel: #080808;
+  --panel-2: #121212;
+  --text: #ffffff;
+  --muted: #b3b3b3;
+  --neon: #7cff00;
+  --neon-deep: #39ff14;
+  --neon-light: #b4ff39;
+  --hairline: rgb(124 255 0 / .16);
+  --content: 1180px;
+  --toolbar-height: 78px;
+  --toolbar-background: rgb(0 0 0 / .92);
+  --section-background: rgb(0 0 0 / .55);
+  --whatsapp: #25d366;
+  --facebook: #1877f2;
+  --neon-rgb: 124 255 0;
+}
+
+@media (max-width:620px) {
+  :root {
+    --toolbar-height: 71px;
+  }
+}
