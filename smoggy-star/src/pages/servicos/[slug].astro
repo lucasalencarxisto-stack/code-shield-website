@@ -1,0 +1,29 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ServiceIcon from '../../components/ui/ServiceIcon.astro';
+import { services, type Service } from '../../data/services';
+
+export function getStaticPaths() {
+  return services.map((service) => ({ params: { slug: service.slug }, props: { service } }));
+}
+interface Props { service: Service; }
+const { service } = Astro.props;
+---
+<MainLayout title={`${service.title} | Code Shield`} description={service.description}>
+  <section class="page-hero">
+    <div class="wrap">
+      <div class="breadcrumb"><a href="/">Início</a><span>/</span><a href="/servicos/">Serviços</a><span>/</span><span>{service.title}</span></div>
+      <span class="eyebrow"><span class="dot"></span> {service.eyebrow}</span>
+      <h1>{service.headline}</h1>
+      <p>{service.description}</p>
+      <a class="btn btn-primary" href="/contato/">Solicitar orçamento <span aria-hidden="true">↗</span></a>
+    </div>
+  </section>
+  <section class="section wrap">
+    <div class="detail-grid">
+      <div class="detail-panel"><span class="section-label">O QUE PODEMOS ENTREGAR</span><h2>Uma solução com começo, meio e entrega.</h2><p>Definimos escopo, prioridades e prazos junto com você, sem prometer recursos que não fazem parte do projeto.</p><ul class="benefit-list">{service.benefits.map((benefit)=>(<li>{benefit}</li>))}</ul></div>
+      <aside class="detail-panel detail-aside"><ServiceIcon slug={service.slug} /><h2>Vamos conversar sobre {service.title.toLocaleLowerCase('pt-BR')}?</h2><p>{service.note}</p><a class="btn btn-primary" href="/contato/">Pedir uma proposta <span aria-hidden="true">↗</span></a></aside>
+    </div>
+  </section>
+  <section class="cta-section"><div class="wrap cta-panel"><div><h2>Vamos tirar seu projeto do papel?</h2><p>Uma conversa inicial já ajuda a definir o próximo passo.</p></div><a class="btn btn-outline" href="/servicos/">Ver outros serviços <span aria-hidden="true">↗</span></a></div></section>
+</MainLayout>

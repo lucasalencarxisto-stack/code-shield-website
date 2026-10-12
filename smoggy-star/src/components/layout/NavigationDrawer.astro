@@ -1,0 +1,46 @@
+---
+const path = Astro.url.pathname;
+---
+<div class="menu-backdrop" data-menu-backdrop aria-hidden="true"></div>
+  <nav class="nav-drawer" id="primary-nav" aria-label="Navegação principal" data-menu inert>
+    <div class="drawer-heading"><span>NAVEGAÇÃO</span><button class="drawer-close" type="button" aria-label="Fechar menu" data-menu-close>✕</button></div>
+    <a href="/" aria-current={path === '/' ? 'page' : undefined}>Início <span>01</span></a>
+    <a href="/servicos/" aria-current={path.startsWith('/servicos') ? 'page' : undefined}>Serviços <span>02</span></a>
+    <a href="/projetos/" aria-current={path.startsWith('/projetos') ? 'page' : undefined}>Projetos <span>03</span></a>
+    <a href="/sobre/" aria-current={path.startsWith('/sobre') ? 'page' : undefined}>Sobre <span>04</span></a>
+    <a href="/contato/" aria-current={path.startsWith('/contato') ? 'page' : undefined}>Contato <span>05</span></a>
+    <div class="drawer-foot">CODE SHIELD <span>EST. 2025</span></div>
+  </nav>
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-menu-toggle]');
+  const nav = document.querySelector<HTMLElement>('[data-menu]');
+  const backdrop = document.querySelector<HTMLElement>('[data-menu-backdrop]');
+  const close = document.querySelector<HTMLButtonElement>('[data-menu-close]');
+  let previousFocus: Element | null = null;
+  function setOpen(open: boolean) {
+    if (!button || !nav || !backdrop) return;
+    nav.classList.toggle('is-open', open);
+    backdrop.classList.toggle('is-open', open);
+    nav.inert = !open;
+    document.querySelectorAll<HTMLElement>('main, .site-footer, .header-toolbar, .skip').forEach((element) => { element.inert = open; });
+    document.body.classList.toggle('drawer-open', open);
+    button.setAttribute('aria-expanded', String(open));
+    button.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+    if (open) { previousFocus = document.activeElement; close?.focus(); }
+    else if (previousFocus instanceof HTMLElement) previousFocus.focus();
+  }
+  button?.addEventListener('click', () => setOpen(!nav?.classList.contains('is-open')));
+  close?.addEventListener('click', () => setOpen(false));
+  backdrop?.addEventListener('click', () => setOpen(false));
+  nav?.querySelectorAll('a').forEach((a) => a.addEventListener('click', () => setOpen(false)));
+  document.addEventListener('keydown', (event) => {
+    if (!nav?.classList.contains('is-open')) return;
+    if (event.key === 'Escape') { setOpen(false); return; }
+    if (event.key === 'Tab') {
+      const items = [...nav.querySelectorAll<HTMLElement>('button:not([disabled]),a[href]')];
+      const i = items.indexOf(document.activeElement as HTMLElement);
+      if (event.shiftKey && i <= 0) { event.preventDefault(); items[items.length - 1]?.focus(); }
+      else if (!event.shiftKey && i === items.length - 1) { event.preventDefault(); items[0]?.focus(); }
+    }
+  });
+</script>

@@ -1,0 +1,36 @@
+---
+import '../styles/global.css';
+import VideoBackground from '../components/ui/VideoBackground.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+
+interface Props { title?: string; description?: string; }
+const {
+  title = 'Code Shield | Desenvolvimento, QA & Segurança',
+  description = 'Sites profissionais, aplicações sob medida, qualidade de software e soluções de segurança digital.'
+} = Astro.props;
+---
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <link rel="icon" type="image/webp" href="/images/branding/selo-code-shield.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <VideoBackground />
+    <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+    <Header />
+    <main id="conteudo" tabindex="-1"><slot /></main>
+    <Footer />
+  </body>
+</html>

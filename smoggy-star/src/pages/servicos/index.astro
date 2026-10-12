@@ -1,0 +1,9 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import ServiceIcon from '../../components/ui/ServiceIcon.astro';
+import { services } from '../../data/services';
+---
+<MainLayout title="Serviços | Code Shield" description="Conheça nossos serviços de websites, QA, segurança digital, software, IA e aplicativos.">
+  <section class="page-hero"><div class="wrap"><div class="breadcrumb"><a href="/">Início</a><span>/</span><span>Serviços</span></div><span class="eyebrow"><span class="dot"></span> SOLUÇÕES DIGITAIS</span><h1>Uma especialidade para <span class="gradient-text">cada desafio.</span></h1><p>Explore nossos serviços. Cada solução possui uma página com detalhes, possibilidades e um caminho claro para conversar sobre seu projeto.</p></div></section>
+  <section class="section wrap"><div class="services-grid">{services.map(service=>(<a href={`/servicos/${service.slug}/`} class="service-card"><ServiceIcon slug={service.slug} /><h3>{service.title}</h3><p>{service.short}</p><span class="service-link">Explorar serviço <span aria-hidden="true">↗</span></span></a>))}</div></section>
+</MainLayout>

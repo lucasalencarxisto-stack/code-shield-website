@@ -1,0 +1,8 @@
+node_modules/
+smoggy-star/node_modules/
+smoggy-star/dist/
+smoggy-star/.astro/
+*.log
+.env
+.env.*
+!.env.example

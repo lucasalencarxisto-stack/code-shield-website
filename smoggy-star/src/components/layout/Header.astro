@@ -1,0 +1,16 @@
+---
+import NavigationDrawer from './NavigationDrawer.astro';
+import SocialIcons from '../ui/SocialIcons.astro';
+---
+<header class:list={['site-header', { 'site-header--overlay': Astro.url.pathname === '/' }]}>
+  <div class="header-toolbar">
+    <div class="wrap header-inner">
+      <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-controls="primary-nav" aria-expanded="false" data-menu-toggle>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <span>Menu</span>
+      </button>
+      <SocialIcons />
+    </div>
+  </div>
+  <NavigationDrawer />
+</header>

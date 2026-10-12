@@ -1,0 +1,25 @@
+---
+const principles = [
+  { title: 'ENGENHARIA', description: 'Tecnologia estruturada para funcionar.', image: '/images/branding/engenharia01.jpg' },
+  { title: 'CRIATIVIDADE', description: 'Ideias transformadas em experiências digitais.', image: '/images/branding/criatividade02.jpg' },
+  { title: 'SEGURANÇA', description: 'Boas práticas desde a primeira linha de código.', image: '/images/branding/segurança03.jpg' },
+];
+---
+<section class="section institutional-section" aria-labelledby="dna-title">
+  <div class="wrap institutional-reveal">
+    <div class="section-heading">
+      <span class="section-label">03 / NOSSO DNA</span>
+      <h2 class="section-title" id="dna-title">Princípios que guiam <span class="gradient-text">cada entrega.</span></h2>
+    </div>
+    <div class="institutional-dna-grid">
+      {principles.map((principle, index) => (
+        <article class="institutional-dna-card">
+          <img class="institutional-dna-background" src={principle.image} alt="" loading="lazy" decoding="async" />
+          <span class="institutional-dna-number" aria-hidden="true">0{index + 1}</span>
+          <h3>{principle.title}</h3>
+          <p>{principle.description}</p>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

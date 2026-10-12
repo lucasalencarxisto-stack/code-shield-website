@@ -1,0 +1,21 @@
+---
+import ServiceIcon from '../ui/ServiceIcon.astro';
+import { services } from '../../data/services';
+---
+  <section id="servicos" class="section wrap" aria-labelledby="services-title">
+    <div class="section-heading">
+      <span class="section-label">01 / O QUE FAZEMOS</span>
+      <h2 class="section-title" id="services-title">Tecnologia com propósito.<br /><span class="gradient-text">Soluções sem enrolação.</span></h2>
+      <p class="section-description">Da primeira página da sua marca ao teste de qualidade de um sistema. Cada serviço tem seu espaço, seu escopo e uma entrega clara.</p>
+    </div>
+    <div class="services-grid">
+      {services.map((service) => (
+        <a href={`/servicos/${service.slug}/`} class="service-card">
+          <ServiceIcon slug={service.slug} />
+          <h3>{service.title}</h3>
+          <p>{service.short}</p>
+          <span class="service-link">Conhecer serviço <span aria-hidden="true">↗</span></span>
+        </a>
+      ))}
+    </div>
+  </section>
