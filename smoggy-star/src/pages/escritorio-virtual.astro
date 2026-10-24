@@ -1,0 +1,49 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout
+  title="Escritório Virtual | Code Shield"
+  description="Em breve, conheça o escritório virtual da Code Shield e acompanhe nossa equipe em um ambiente interativo."
+>
+  <section class="virtual-office-page" aria-labelledby="office-title">
+    <div class="wrap virtual-office-content">
+      <nav class="breadcrumb" aria-label="Você está aqui">
+        <a href="/">Início</a><span>/</span><span>Escritório Virtual</span>
+      </nav>
+      <div class="virtual-office-placeholder">
+        <span class="virtual-office-eyebrow"><span class="virtual-office-dot" aria-hidden="true"></span> NOVO ESPAÇO EM PREPARAÇÃO</span>
+        <h1 id="office-title">Escritório <span class="gradient-text">Virtual</span></h1>
+        <p>Estamos preparando um novo lugar para conhecer de perto o universo da Code Shield.</p>
+        <div class="virtual-office-frame" aria-label="Espaço reservado para o futuro escritório virtual">
+          <div class="virtual-office-frame-inner">
+            <span class="virtual-office-icon" aria-hidden="true">⌘</span>
+            <strong>Nosso escritório está ganhando forma.</strong>
+            <span>Em breve, você poderá explorar esse espaço.</span>
+          </div>
+        </div>
+        <p class="virtual-office-note">No lançamento, visitantes poderão explorar o escritório em modo de observação. O acesso à colaboração com agentes será reservado a funcionários autorizados.</p>
+        <a class="virtual-office-back" href="/">← Voltar ao início</a>
+      </div>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+  .virtual-office-page { min-height: min(880px, calc(100svh - 80px)); padding: clamp(72px, 9vw, 128px) 0 90px; }
+  .virtual-office-content { max-width: 1140px; }
+  .virtual-office-placeholder { margin-top: clamp(32px, 5vw, 70px); text-align: center; }
+  .virtual-office-eyebrow { display: inline-flex; gap: 10px; align-items: center; color: var(--neon-light); font: 700 .76rem 'Rajdhani', sans-serif; letter-spacing: .19em; }
+  .virtual-office-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--neon); box-shadow: 0 0 14px rgb(var(--neon-rgb) / .65); }
+  h1 { margin: 20px 0 14px; font-size: clamp(2.9rem, 7vw, 6rem); line-height: 1.08; letter-spacing: -.07em; }
+  .virtual-office-placeholder > p { max-width: 660px; margin: 0 auto; color: var(--muted); font-size: clamp(1rem, 1.6vw, 1.13rem); line-height: 1.75; }
+  .virtual-office-frame { display: grid; place-items: center; aspect-ratio: 16 / 7; min-height: 255px; margin: 38px 0 28px; padding: 14px; border: 1px solid rgb(var(--neon-rgb) / .22); border-radius: 26px; background: linear-gradient(145deg, rgb(var(--neon-rgb) / .07), transparent 58%), var(--panel); box-shadow: inset 0 1px rgb(255 255 255 / .04), 0 24px 80px rgb(0 0 0 / .25); }
+  .virtual-office-frame-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px; width: 100%; height: 100%; min-height: 225px; justify-content: center; border: 1px dashed rgb(var(--neon-rgb) / .2); border-radius: 16px; }
+  .virtual-office-icon { display: grid; place-items: center; width: 66px; height: 66px; border-radius: 18px; border: 1px solid rgb(var(--neon-rgb) / .3); color: var(--neon-light); font-size: 2rem; }
+  .virtual-office-frame strong { font: 600 clamp(1.15rem, 2vw, 1.65rem) 'Space Grotesk', sans-serif; }
+  .virtual-office-frame-inner > span:last-child { color: var(--muted); }
+  .virtual-office-placeholder > .virtual-office-note { font-size: .92rem; max-width: 720px; }
+  .virtual-office-back { display: inline-flex; margin-top: 28px; padding: 12px 18px; border-radius: 11px; border: 1px solid rgb(var(--neon-rgb) / .3); color: var(--neon-light); font-weight: 600; transition: background .2s, border-color .2s; }
+  .virtual-office-back:hover, .virtual-office-back:focus-visible { background: rgb(var(--neon-rgb) / .09); border-color: var(--neon); }
+  @media (max-width: 620px) { .virtual-office-frame { aspect-ratio: auto; padding: 9px; margin-top: 28px; } .virtual-office-frame-inner { min-height: 240px; } }
+</style>
